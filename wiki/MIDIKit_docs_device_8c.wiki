@@ -6,9 +6,23 @@
 
 == Functions ==
 
-int MIDIDeviceReceiveNoteOff(struct  * device,  channel,  key,  velocity)
-  *Note off.*
-int MIDIDeviceSendNoteOff(struct  * device,  channel,  key,  velocity)
+int _connect(struct  ** device_connector, struct  * connector)
+  **
+int _disconnect(struct  ** device_connector)
+  **
+int _in_relay(void * devicep, struct  * message)
+  **
+int _in_connect(void * devicep, struct  * in)
+  **
+int _in_disconnect(void * devicep, struct  * in)
+  **
+int _out_connect(void * devicep, struct  * out)
+  **
+int _out_disconnect(void * devicep, struct  * out)
+  **
+int _thru_connect(void * devicep, struct  * thru)
+  **
+int _thru_disconnect(void * devicep, struct  * thru)
   **
 
 == Detailed Description ==
@@ -19,13 +33,11 @@ int MIDIDeviceSendNoteOff(struct  * device,  channel,  key,  velocity)
 == Function Documentation ==
 
 {{{
-#int MIDIDeviceReceiveNoteOff   (
-  struct  * device,
-   channel,
-   key,
-   velocity  )
+#int _connect   (
+  struct  ** device_connector,
+  struct  * connector  )
 }}}
-  Note off.
+  
   
 
 *Parameters*:
@@ -35,11 +47,106 @@ int MIDIDeviceSendNoteOff(struct  * device,  channel,  key,  velocity)
   And a return value!
 
 {{{
-#int MIDIDeviceSendNoteOff   (
-  struct  * device,
-   channel,
-   key,
-   velocity  )
+#int _disconnect   (
+  struct  ** device_connector  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _in_relay   (
+  void * devicep,
+  struct  * message  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _in_connect   (
+  void * devicep,
+  struct  * in  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _in_disconnect   (
+  void * devicep,
+  struct  * in  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _out_connect   (
+  void * devicep,
+  struct  * out  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _out_disconnect   (
+  void * devicep,
+  struct  * out  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _thru_connect   (
+  void * devicep,
+  struct  * thru  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _thru_disconnect   (
+  void * devicep,
+  struct  * thru  )
 }}}
   
   

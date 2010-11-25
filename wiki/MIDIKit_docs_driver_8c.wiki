@@ -6,9 +6,21 @@
 
 == Functions ==
 
-struct  MIDIDriverReceiveConnectorDelegate()
+void _list_destroy(struct  ** list, int(*)(struct  *) fn)
   **
-struct  MIDIDriverSendConnectorDelegate()
+void _list_push(struct  ** list, struct  * connector)
+  **
+void _list_remove(struct  ** list, struct  * connector, int(*)(struct  *) fn)
+  **
+int _receiver_connect(void * driverp, struct  * receiver)
+  **
+int _receiver_disconnect(void * driverp, struct  * receiver)
+  **
+int _sender_relay(void * driverp, struct  * message)
+  **
+int _sender_connect(void * driverp, struct  * sender)
+  **
+int _sender_disconnect(void * driverp, struct  * sender)
   **
 
 == Detailed Description ==
@@ -19,22 +31,115 @@ struct  MIDIDriverSendConnectorDelegate()
 == Function Documentation ==
 
 {{{
-#struct  MIDIDriverReceiveConnectorDelegate   (
-  )
+#void _list_destroy   (
+  struct  ** list,
+  int(*)(struct  *) fn  )
 }}}
   
   
 
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
 *Returns*:
   And a return value!
 
 {{{
-#struct  MIDIDriverSendConnectorDelegate   (
-  )
+#void _list_push   (
+  struct  ** list,
+  struct  * connector  )
 }}}
   
   
 
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#void _list_remove   (
+  struct  ** list,
+  struct  * connector,
+  int(*)(struct  *) fn  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _receiver_connect   (
+  void * driverp,
+  struct  * receiver  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _receiver_disconnect   (
+  void * driverp,
+  struct  * receiver  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _sender_relay   (
+  void * driverp,
+  struct  * message  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _sender_connect   (
+  void * driverp,
+  struct  * sender  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _sender_disconnect   (
+  void * driverp,
+  struct  * sender  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
 *Returns*:
   And a return value!
 

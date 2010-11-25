@@ -43,60 +43,60 @@ int MIDIDeviceReceive(struct  * device, struct  * message)
 int MIDIDeviceSend(struct  * device, struct  * message)
   **
 int MIDIDeviceReceiveNoteOff(struct  * device,  channel,  key,  velocity)
-  *Note off.*
+  **
 int MIDIDeviceSendNoteOff(struct  * device,  channel,  key,  velocity)
   **
 int MIDIDeviceReceiveNoteOn(struct  * device,  channel,  key,  velocity)
-  *Note on.*
+  **
 int MIDIDeviceSendNoteOn(struct  * device,  channel,  key,  velocity)
   **
 int MIDIDeviceReceivePolyphonicKeyPressure(struct  * device,  channel,  key,  pressure)
-  *Polyphonic key pressure.*
+  **
 int MIDIDeviceSendPolyphonicKeyPressure(struct  * device,  channel,  key,  pressure)
   **
 int MIDIDeviceReceiveControlChange(struct  * device,  channel,  control,  value)
-  *Control change.*
+  **
 int MIDIDeviceSendControlChange(struct  * device,  channel,  control,  value)
   **
 int MIDIDeviceReceiveProgramChange(struct  * device,  channel,  program)
-  *Program change.*
+  **
 int MIDIDeviceSendProgramChange(struct  * device,  channel,  program)
   **
 int MIDIDeviceReceiveChannelPressure(struct  * device,  channel,  pressure)
-  *Channel pressure.*
+  **
 int MIDIDeviceSendChannelPressure(struct  * device,  channel,  pressure)
   **
 int MIDIDeviceReceivePitchWheelChange(struct  * device,  channel,  value)
-  *Pitch wheel change.*
+  **
 int MIDIDeviceSendPitchWheelChange(struct  * device,  channel,  value)
   **
 int MIDIDeviceReceiveSystemExclusive(struct  * device,  manufacturer_id, size_t size, void * data, uint8_t fragment)
-  *System exclusive.*
+  **
 int MIDIDeviceSendSystemExclusive(struct  * device,  manufacturer_id, size_t size, void * data, uint8_t fragment)
   **
 int MIDIDeviceReceiveTimeCodeQuarterFrame(struct  * device,  time_code_type,  value)
-  *Time code quarter frame.*
+  **
 int MIDIDeviceSendTimeCodeQuarterFrame(struct  * device,  time_code_type,  value)
   **
 int MIDIDeviceReceiveSongPositionPointer(struct  * device,  value)
-  *Song position pointer.*
+  **
 int MIDIDeviceSendSongPositionPointer(struct  * device,  value)
   **
 int MIDIDeviceReceiveSongSelect(struct  * device,  value)
-  *Song select.*
+  **
 int MIDIDeviceSendSongSelect(struct  * device,  value)
   **
 int MIDIDeviceReceiveTuneRequest(struct  * device)
-  *Tune request.*
+  **
 int MIDIDeviceSendTuneRequest(struct  * device)
   **
 int MIDIDeviceReceiveEndOfExclusive(struct  * device)
-  *End of exclusive.*
+  **
 int MIDIDeviceSendEndOfExclusive(struct  * device)
   **
-int MIDIDeviceReceiveRealTime(struct  * device,  status)
-  *Real time.*
-int MIDIDeviceSendRealTime(struct  * device,  status)
+int MIDIDeviceReceiveRealTime(struct  * device,  status,  timestamp)
+  **
+int MIDIDeviceSendRealTime(struct  * device,  status,  timestamp)
   **
 
 == Detailed Description ==
@@ -360,7 +360,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
    key,
    velocity  )
 }}}
-  Note off.
+  
   
 
 *Parameters*:
@@ -392,7 +392,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
    key,
    velocity  )
 }}}
-  Note on.
+  
   
 
 *Parameters*:
@@ -424,7 +424,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
    key,
    pressure  )
 }}}
-  Polyphonic key pressure.
+  
   
 
 *Parameters*:
@@ -456,7 +456,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
    control,
    value  )
 }}}
-  Control change.
+  
   
 
 *Parameters*:
@@ -487,7 +487,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
    channel,
    program  )
 }}}
-  Program change.
+  
   
 
 *Parameters*:
@@ -517,7 +517,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
    channel,
    pressure  )
 }}}
-  Channel pressure.
+  
   
 
 *Parameters*:
@@ -547,7 +547,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
    channel,
    value  )
 }}}
-  Pitch wheel change.
+  
   
 
 *Parameters*:
@@ -579,7 +579,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
   void * data,
   uint8_t fragment  )
 }}}
-  System exclusive.
+  
   
 
 *Parameters*:
@@ -611,7 +611,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
    time_code_type,
    value  )
 }}}
-  Time code quarter frame.
+  
   
 
 *Parameters*:
@@ -640,7 +640,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
   struct  * device,
    value  )
 }}}
-  Song position pointer.
+  
   
 
 *Parameters*:
@@ -668,7 +668,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
   struct  * device,
    value  )
 }}}
-  Song select.
+  
   
 
 *Parameters*:
@@ -695,7 +695,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
 #int MIDIDeviceReceiveTuneRequest   (
   struct  * device  )
 }}}
-  Tune request.
+  
   
 
 *Parameters*:
@@ -721,7 +721,7 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
 #int MIDIDeviceReceiveEndOfExclusive   (
   struct  * device  )
 }}}
-  End of exclusive.
+  
   
 
 *Parameters*:
@@ -746,9 +746,10 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
 {{{
 #int MIDIDeviceReceiveRealTime   (
   struct  * device,
-   status  )
+   status,
+   timestamp  )
 }}}
-  Real time.
+  
   
 
 *Parameters*:
@@ -760,7 +761,8 @@ int MIDIDeviceSendRealTime(struct  * device,  status)
 {{{
 #int MIDIDeviceSendRealTime   (
   struct  * device,
-   status  )
+   status,
+   timestamp  )
 }}}
   
   

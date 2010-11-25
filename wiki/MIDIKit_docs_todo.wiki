@@ -1,0 +1,11 @@
+#labels Doxygen 
+
+
+
+Member MIDIManufacturerId
+ Make this 4 bytes and sysex-decoder/encoder read var length
+
+
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||

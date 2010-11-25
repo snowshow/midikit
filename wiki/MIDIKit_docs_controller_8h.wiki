@@ -7,7 +7,7 @@
 == Functions ==
 
 int MIDI_CONTROL_BANK_SELECT()
-  *Various MIDI control numbers, legal values for MIDIControl variables.*
+  **
 int MIDI_CONTROL_MODULATION_WHEEL()
   **
 int MIDI_CONTROL_BREATH_CONTROLLER()
@@ -140,7 +140,7 @@ int MIDI_CONTROL_POLY_MODE_ON()
 #int MIDI_CONTROL_BANK_SELECT   (
   )
 }}}
-  Various MIDI control numbers, legal values for MIDIControl variables.
+  
   
 
 *Returns*:
