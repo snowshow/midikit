@@ -1,0 +1,54 @@
+#summary Documentation for the device.c file
+
+= device.c =
+
+
+
+== Functions ==
+
+int MIDIDeviceReceiveNoteOff(struct  * device,  channel,  key,  velocity)
+  *Note off.*
+int MIDIDeviceSendNoteOff(struct  * device,  channel,  key,  velocity)
+  **
+
+== Detailed Description ==
+
+
+
+
+== Function Documentation ==
+
+{{{
+#int MIDIDeviceReceiveNoteOff   (
+  struct  * device,
+   channel,
+   key,
+   velocity  )
+}}}
+  Note off.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendNoteOff   (
+  struct  * device,
+   channel,
+   key,
+   velocity  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||

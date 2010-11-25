@@ -1,0 +1,102 @@
+#summary Documentation for the midi.h file
+
+= midi.h =
+
+
+
+== Functions ==
+
+int MIDI_STATUS_NOTE_OFF()
+  *Channel Voice Messages (Status has 4 bits & is followed by a 4 bit channel number.)*
+int MIDI_STATUS_NOTE_ON()
+  *Note On event.*
+int MIDI_STATUS_POLYPHONIC_KEY_PRESSURE()
+  *Polyphonic Key Pressure (Aftertouch).*
+int MIDI_STATUS_CONTROL_CHANGE()
+  *Control Change.*
+int MIDI_STATUS_PROGRAM_CHANGE()
+  *Program Change.*
+int MIDI_STATUS_CHANNEL_PRESSURE()
+  *Channel Pressure (After-touch).*
+int MIDI_STATUS_PITCH_WHEEL_CHANGE()
+  *Pitch Wheel Change.*
+
+== Detailed Description ==
+
+
+
+
+== Function Documentation ==
+
+{{{
+#int MIDI_STATUS_NOTE_OFF   (
+  )
+}}}
+  Channel Voice Messages (Status has 4 bits & is followed by a 4 bit channel number.)
+  Note Off event. This message is sent when a note is released (ended).
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_STATUS_NOTE_ON   (
+  )
+}}}
+  Note On event.
+  This message is sent when a note is depressed (start).
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_STATUS_POLYPHONIC_KEY_PRESSURE   (
+  )
+}}}
+  Polyphonic Key Pressure (Aftertouch).
+  This message is most often sent by pressing down on the key after it "bottoms out".
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_STATUS_CONTROL_CHANGE   (
+  )
+}}}
+  Control Change.
+  This message is sent when a controller value changes. Controllers include devices such as pedals and levers.
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_STATUS_PROGRAM_CHANGE   (
+  )
+}}}
+  Program Change.
+  This message sent when the patch number changes.
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_STATUS_CHANNEL_PRESSURE   (
+  )
+}}}
+  Channel Pressure (After-touch).
+  This message is most often sent by pressing down on the key after it "bottoms out". This message is different from polyphonic after-touch. Use this message to send the single greatest pressure value (of all the current depressed keys).
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_STATUS_PITCH_WHEEL_CHANGE   (
+  )
+}}}
+  Pitch Wheel Change.
+  
+
+*Returns*:
+  And a return value!
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||

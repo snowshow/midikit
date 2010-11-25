@@ -1,0 +1,114 @@
+#summary Documentation for the controller.c file
+
+= controller.c =
+
+
+
+== Functions ==
+
+struct  * MIDIControllerCreate(struct  * delegate)
+  **
+void MIDIControllerDestroy(struct  * controller)
+  **
+void MIDIControllerRetain(struct  * controller)
+  **
+void MIDIControllerRelease(struct  * controller)
+  **
+int MIDIControllerReceiveControlChange(struct  * controller,  channel,  control,  value)
+  **
+int MIDIControllerSendControlChange(struct  * controller,  channel,  control,  value)
+  **
+
+== Detailed Description ==
+
+
+
+
+== Function Documentation ==
+
+{{{
+#struct  * MIDIControllerCreate   (
+  struct  * delegate  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#void MIDIControllerDestroy   (
+  struct  * controller  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#void MIDIControllerRetain   (
+  struct  * controller  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#void MIDIControllerRelease   (
+  struct  * controller  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIControllerReceiveControlChange   (
+  struct  * controller,
+   channel,
+   control,
+   value  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIControllerSendControlChange   (
+  struct  * controller,
+   channel,
+   control,
+   value  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||

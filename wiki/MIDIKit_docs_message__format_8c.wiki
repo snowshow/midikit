@@ -1,0 +1,528 @@
+#summary Documentation for the message_format.c file
+
+= message_format.c =
+
+
+
+== Functions ==
+
+int PROPERTY_CASE_BASE()
+  *Getters and setters.*
+int PROPERTY_CASE_SET()
+  **
+int PROPERTY_CASE_SET_H()
+  **
+int PROPERTY_CASE_SET_L()
+  **
+int PROPERTY_CASE_GET()
+  **
+int PROPERTY_CASE_GET_H()
+  **
+int PROPERTY_CASE_GET_L()
+  **
+int PROPERTY_DEFAULT()
+  **
+int _set_note_off_on(struct  * data,  property, size_t size, void * value)
+  *Set properties of note on/off messages.*
+int _get_note_off_on(struct  * data,  property, size_t size, void * value)
+  *Get properties of note on/off messages.*
+int _set_polyphonic_key_pressure(struct  * data,  property, size_t size, void * value)
+  *Set properties of polyphonic key pressure messages.*
+int _get_polyphonic_key_pressure(struct  * data,  property, size_t size, void * value)
+  *Get properties of polyphonic key pressure messages.*
+int _set_control_change(struct  * data,  property, size_t size, void * value)
+  *Set properties of control change messages.*
+int _get_control_change(struct  * data,  property, size_t size, void * value)
+  *Get properties of control change messages.*
+int _set_program_change(struct  * data,  property, size_t size, void * value)
+  *Set properties of program change messages.*
+int _get_program_change(struct  * data,  property, size_t size, void * value)
+  *Get properties of program change messages.*
+int _set_channel_pressure(struct  * data,  property, size_t size, void * value)
+  *Set properties of channel pressure messages.*
+int _get_channel_pressure(struct  * data,  property, size_t size, void * value)
+  *Get properties of channel pressure messages.*
+int _set_pitch_wheel_change(struct  * data,  property, size_t size, void * value)
+  *Set properties of pitch wheel change messages.*
+int _get_pitch_wheel_change(struct  * data,  property, size_t size, void * value)
+  *Get properties of pitch wheel change messages.*
+int _set_system_exclusive(struct  * data,  property, size_t size, void * value)
+  *Set properties of system exclusive messages.*
+int _get_system_exclusive(struct  * data,  property, size_t size, void * value)
+  *Get properties of system exclusive messages.*
+int _set_time_code_quarter_frame(struct  * data,  property, size_t size, void * value)
+  *Set properties of time code quarter frame messages.*
+int _get_time_code_quarter_frame(struct  * data,  property, size_t size, void * value)
+  *Get properties of time code quarter frame messages.*
+int _set_song_position_pointer(struct  * data,  property, size_t size, void * value)
+  *Set properties of song position pointer messages.*
+int _get_song_position_pointer(struct  * data,  property, size_t size, void * value)
+  *Get properties of song position pointer messages.*
+int _set_song_select(struct  * data,  property, size_t size, void * value)
+  *Set properties of song select messages.*
+int _get_song_select(struct  * data,  property, size_t size, void * value)
+  *Get properties of song select messages.*
+int _set_tune_request(struct  * data,  property, size_t size, void * value)
+  *Set properties of tune request messages.*
+int _set_real_time(struct  * data,  property, size_t size, void * value)
+  *Set properties of real time messages.*
+int _get_tune_request_real_time(struct  * data,  property, size_t size, void * value)
+  *Get properties of tune request and real time messages.*
+
+== Detailed Description ==
+
+
+
+
+== Function Documentation ==
+
+{{{
+#int PROPERTY_CASE_BASE   (
+  )
+}}}
+  Getters and setters.
+  Functions to get ans set properties of the different messages.
+
+*Returns*:
+  And a return value!
+
+{{{
+#int PROPERTY_CASE_SET   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int PROPERTY_CASE_SET_H   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int PROPERTY_CASE_SET_L   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int PROPERTY_CASE_GET   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int PROPERTY_CASE_GET_H   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int PROPERTY_CASE_GET_L   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int PROPERTY_DEFAULT   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_note_off_on   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of note on/off messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_note_off_on   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of note on/off messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_polyphonic_key_pressure   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of polyphonic key pressure messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_polyphonic_key_pressure   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of polyphonic key pressure messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_control_change   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of control change messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_control_change   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of control change messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_program_change   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of program change messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_program_change   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of program change messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_channel_pressure   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of channel pressure messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_channel_pressure   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of channel pressure messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_pitch_wheel_change   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of pitch wheel change messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_pitch_wheel_change   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of pitch wheel change messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_system_exclusive   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of system exclusive messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_system_exclusive   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of system exclusive messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_time_code_quarter_frame   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of time code quarter frame messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_time_code_quarter_frame   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of time code quarter frame messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_song_position_pointer   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of song position pointer messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_song_position_pointer   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of song position pointer messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_song_select   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of song select messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_song_select   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of song select messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_tune_request   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of tune request messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _set_real_time   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Set properties of real time messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int _get_tune_request_real_time   (
+  struct  * data,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  Get properties of tune request and real time messages.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||

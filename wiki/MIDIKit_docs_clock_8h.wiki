@@ -1,0 +1,126 @@
+#summary Documentation for the clock.h file
+
+= clock.h =
+
+
+
+== Functions ==
+
+int MIDI_SAMPLING_RATE_8KHZ()
+  **
+int MIDI_SAMPLING_RATE_11KHZ()
+  **
+int MIDI_SAMPLING_RATE_44K1HZ()
+  **
+int MIDI_SAMPLING_RATE_48KHZ()
+  **
+int MIDI_SAMPLING_RATE_88K2HZ()
+  **
+int MIDI_SAMPLING_RATE_96KHZ()
+  **
+int MIDI_SAMPLING_RATE_176K4HZ()
+  **
+int MIDI_SAMPLING_RATE_192KHZ()
+  **
+int MIDI_SAMPLING_RATE_DEFAULT()
+  **
+
+== Detailed Description ==
+
+
+
+
+== Function Documentation ==
+
+{{{
+#int MIDI_SAMPLING_RATE_8KHZ   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_SAMPLING_RATE_11KHZ   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_SAMPLING_RATE_44K1HZ   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_SAMPLING_RATE_48KHZ   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_SAMPLING_RATE_88K2HZ   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_SAMPLING_RATE_96KHZ   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_SAMPLING_RATE_176K4HZ   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_SAMPLING_RATE_192KHZ   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDI_SAMPLING_RATE_DEFAULT   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||

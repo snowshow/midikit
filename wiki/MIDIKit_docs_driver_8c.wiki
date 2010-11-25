@@ -1,0 +1,42 @@
+#summary Documentation for the driver.c file
+
+= driver.c =
+
+
+
+== Functions ==
+
+struct  MIDIDriverReceiveConnectorDelegate()
+  **
+struct  MIDIDriverSendConnectorDelegate()
+  **
+
+== Detailed Description ==
+
+
+
+
+== Function Documentation ==
+
+{{{
+#struct  MIDIDriverReceiveConnectorDelegate   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#struct  MIDIDriverSendConnectorDelegate   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||

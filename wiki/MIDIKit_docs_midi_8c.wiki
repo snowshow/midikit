@@ -1,0 +1,13 @@
+#summary Documentation for the midi.c file
+
+= midi.c =
+
+
+
+== Detailed Description ==
+
+
+
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||

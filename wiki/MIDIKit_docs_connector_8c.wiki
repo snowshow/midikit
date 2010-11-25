@@ -1,0 +1,54 @@
+#summary Documentation for the connector.c file
+
+= connector.c =
+
+
+
+== Functions ==
+
+int(* RelayFn()
+  **
+int(* ConnectFn()
+  **
+int(* DisconnectFn()
+  **
+
+== Detailed Description ==
+
+
+
+
+== Function Documentation ==
+
+{{{
+#int(* RelayFn   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int(* ConnectFn   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+{{{
+#int(* DisconnectFn   (
+  )
+}}}
+  
+  
+
+*Returns*:
+  And a return value!
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||

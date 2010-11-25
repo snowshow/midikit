@@ -1,0 +1,228 @@
+#summary Documentation for the message.h file
+
+= message.h =
+
+
+
+== Functions ==
+
+struct  * MIDIMessageCreate( status)
+  **
+void MIDIMessageDestroy(struct  * message)
+  **
+void MIDIMessageRetain(struct  * message)
+  **
+void MIDIMessageRelease(struct  * message)
+  **
+int MIDIMessageSetStatus(struct  * message,  status)
+  **
+int MIDIMessageGetStatus(struct  * message,  * status)
+  **
+int MIDIMessageSetTimestamp(struct  * message,  timestamp)
+  **
+int MIDIMessageGetTimestamp(struct  * message,  * timestamp)
+  **
+int MIDIMessageGetSize(struct  * message, size_t * size)
+  **
+int MIDIMessageSet(struct  * message,  property, size_t size, void * value)
+  **
+int MIDIMessageGet(struct  * message,  property, size_t size, void * value)
+  **
+int MIDIMessageDecode(struct  * message, size_t bytes, unsigned char * buffer)
+  **
+int MIDIMessageEncode(struct  * message, size_t bytes, unsigned char * buffer)
+  **
+
+== Detailed Description ==
+
+
+
+
+== Function Documentation ==
+
+{{{
+#struct  * MIDIMessageCreate   (
+   status  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#void MIDIMessageDestroy   (
+  struct  * message  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#void MIDIMessageRetain   (
+  struct  * message  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#void MIDIMessageRelease   (
+  struct  * message  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIMessageSetStatus   (
+  struct  * message,
+   status  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIMessageGetStatus   (
+  struct  * message,
+   * status  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIMessageSetTimestamp   (
+  struct  * message,
+   timestamp  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIMessageGetTimestamp   (
+  struct  * message,
+   * timestamp  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIMessageGetSize   (
+  struct  * message,
+  size_t * size  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIMessageSet   (
+  struct  * message,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIMessageGet   (
+  struct  * message,
+   property,
+  size_t size,
+  void * value  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIMessageDecode   (
+  struct  * message,
+  size_t bytes,
+  unsigned char * buffer  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIMessageEncode   (
+  struct  * message,
+  size_t bytes,
+  unsigned char * buffer  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||

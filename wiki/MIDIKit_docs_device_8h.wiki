@@ -1,0 +1,775 @@
+#summary Documentation for the device.h file
+
+= device.h =
+
+
+
+== Functions ==
+
+struct  * MIDIDeviceCreate(struct  * delegate)
+  **
+void MIDIDeviceDestroy(struct  * device)
+  **
+void MIDIDeviceRetain(struct  * device)
+  **
+void MIDIDeviceRelease(struct  * device)
+  **
+int MIDIDeviceDetachIn(struct  * device)
+  **
+int MIDIDeviceAttachIn(struct  * device, struct  * in)
+  **
+int MIDIDeviceDetachOut(struct  * device)
+  **
+int MIDIDeviceAttachOut(struct  * device, struct  * out)
+  **
+int MIDIDeviceDetachThru(struct  * device)
+  **
+int MIDIDeviceAttachThru(struct  * device, struct  * thru)
+  **
+int MIDIDeviceSetBaseChannel(struct  * device,  channel)
+  **
+int MIDIDeviceGetBaseChannel(struct  * device,  * channel)
+  **
+int MIDIDeviceSetTimer(struct  * device, struct  * timer)
+  **
+int MIDIDeviceGetTimer(struct  * device, struct  ** timer)
+  **
+int MIDIDeviceSetChannelController(struct  * device,  channel, struct  * controller)
+  **
+int MIDIDeviceGetChannelController(struct  * device,  channel, struct  ** controller)
+  **
+int MIDIDeviceReceive(struct  * device, struct  * message)
+  **
+int MIDIDeviceSend(struct  * device, struct  * message)
+  **
+int MIDIDeviceReceiveNoteOff(struct  * device,  channel,  key,  velocity)
+  *Note off.*
+int MIDIDeviceSendNoteOff(struct  * device,  channel,  key,  velocity)
+  **
+int MIDIDeviceReceiveNoteOn(struct  * device,  channel,  key,  velocity)
+  *Note on.*
+int MIDIDeviceSendNoteOn(struct  * device,  channel,  key,  velocity)
+  **
+int MIDIDeviceReceivePolyphonicKeyPressure(struct  * device,  channel,  key,  pressure)
+  *Polyphonic key pressure.*
+int MIDIDeviceSendPolyphonicKeyPressure(struct  * device,  channel,  key,  pressure)
+  **
+int MIDIDeviceReceiveControlChange(struct  * device,  channel,  control,  value)
+  *Control change.*
+int MIDIDeviceSendControlChange(struct  * device,  channel,  control,  value)
+  **
+int MIDIDeviceReceiveProgramChange(struct  * device,  channel,  program)
+  *Program change.*
+int MIDIDeviceSendProgramChange(struct  * device,  channel,  program)
+  **
+int MIDIDeviceReceiveChannelPressure(struct  * device,  channel,  pressure)
+  *Channel pressure.*
+int MIDIDeviceSendChannelPressure(struct  * device,  channel,  pressure)
+  **
+int MIDIDeviceReceivePitchWheelChange(struct  * device,  channel,  value)
+  *Pitch wheel change.*
+int MIDIDeviceSendPitchWheelChange(struct  * device,  channel,  value)
+  **
+int MIDIDeviceReceiveSystemExclusive(struct  * device,  manufacturer_id, size_t size, void * data, uint8_t fragment)
+  *System exclusive.*
+int MIDIDeviceSendSystemExclusive(struct  * device,  manufacturer_id, size_t size, void * data, uint8_t fragment)
+  **
+int MIDIDeviceReceiveTimeCodeQuarterFrame(struct  * device,  time_code_type,  value)
+  *Time code quarter frame.*
+int MIDIDeviceSendTimeCodeQuarterFrame(struct  * device,  time_code_type,  value)
+  **
+int MIDIDeviceReceiveSongPositionPointer(struct  * device,  value)
+  *Song position pointer.*
+int MIDIDeviceSendSongPositionPointer(struct  * device,  value)
+  **
+int MIDIDeviceReceiveSongSelect(struct  * device,  value)
+  *Song select.*
+int MIDIDeviceSendSongSelect(struct  * device,  value)
+  **
+int MIDIDeviceReceiveTuneRequest(struct  * device)
+  *Tune request.*
+int MIDIDeviceSendTuneRequest(struct  * device)
+  **
+int MIDIDeviceReceiveEndOfExclusive(struct  * device)
+  *End of exclusive.*
+int MIDIDeviceSendEndOfExclusive(struct  * device)
+  **
+int MIDIDeviceReceiveRealTime(struct  * device,  status)
+  *Real time.*
+int MIDIDeviceSendRealTime(struct  * device,  status)
+  **
+
+== Detailed Description ==
+
+
+
+
+== Function Documentation ==
+
+{{{
+#struct  * MIDIDeviceCreate   (
+  struct  * delegate  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#void MIDIDeviceDestroy   (
+  struct  * device  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#void MIDIDeviceRetain   (
+  struct  * device  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#void MIDIDeviceRelease   (
+  struct  * device  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceDetachIn   (
+  struct  * device  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceAttachIn   (
+  struct  * device,
+  struct  * in  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceDetachOut   (
+  struct  * device  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceAttachOut   (
+  struct  * device,
+  struct  * out  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceDetachThru   (
+  struct  * device  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceAttachThru   (
+  struct  * device,
+  struct  * thru  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSetBaseChannel   (
+  struct  * device,
+   channel  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceGetBaseChannel   (
+  struct  * device,
+   * channel  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSetTimer   (
+  struct  * device,
+  struct  * timer  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceGetTimer   (
+  struct  * device,
+  struct  ** timer  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSetChannelController   (
+  struct  * device,
+   channel,
+  struct  * controller  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceGetChannelController   (
+  struct  * device,
+   channel,
+  struct  ** controller  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceive   (
+  struct  * device,
+  struct  * message  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSend   (
+  struct  * device,
+  struct  * message  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveNoteOff   (
+  struct  * device,
+   channel,
+   key,
+   velocity  )
+}}}
+  Note off.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendNoteOff   (
+  struct  * device,
+   channel,
+   key,
+   velocity  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveNoteOn   (
+  struct  * device,
+   channel,
+   key,
+   velocity  )
+}}}
+  Note on.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendNoteOn   (
+  struct  * device,
+   channel,
+   key,
+   velocity  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceivePolyphonicKeyPressure   (
+  struct  * device,
+   channel,
+   key,
+   pressure  )
+}}}
+  Polyphonic key pressure.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendPolyphonicKeyPressure   (
+  struct  * device,
+   channel,
+   key,
+   pressure  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveControlChange   (
+  struct  * device,
+   channel,
+   control,
+   value  )
+}}}
+  Control change.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendControlChange   (
+  struct  * device,
+   channel,
+   control,
+   value  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveProgramChange   (
+  struct  * device,
+   channel,
+   program  )
+}}}
+  Program change.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendProgramChange   (
+  struct  * device,
+   channel,
+   program  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveChannelPressure   (
+  struct  * device,
+   channel,
+   pressure  )
+}}}
+  Channel pressure.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendChannelPressure   (
+  struct  * device,
+   channel,
+   pressure  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceivePitchWheelChange   (
+  struct  * device,
+   channel,
+   value  )
+}}}
+  Pitch wheel change.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendPitchWheelChange   (
+  struct  * device,
+   channel,
+   value  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveSystemExclusive   (
+  struct  * device,
+   manufacturer_id,
+  size_t size,
+  void * data,
+  uint8_t fragment  )
+}}}
+  System exclusive.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendSystemExclusive   (
+  struct  * device,
+   manufacturer_id,
+  size_t size,
+  void * data,
+  uint8_t fragment  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveTimeCodeQuarterFrame   (
+  struct  * device,
+   time_code_type,
+   value  )
+}}}
+  Time code quarter frame.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendTimeCodeQuarterFrame   (
+  struct  * device,
+   time_code_type,
+   value  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveSongPositionPointer   (
+  struct  * device,
+   value  )
+}}}
+  Song position pointer.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendSongPositionPointer   (
+  struct  * device,
+   value  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveSongSelect   (
+  struct  * device,
+   value  )
+}}}
+  Song select.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendSongSelect   (
+  struct  * device,
+   value  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveTuneRequest   (
+  struct  * device  )
+}}}
+  Tune request.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendTuneRequest   (
+  struct  * device  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveEndOfExclusive   (
+  struct  * device  )
+}}}
+  End of exclusive.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendEndOfExclusive   (
+  struct  * device  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceReceiveRealTime   (
+  struct  * device,
+   status  )
+}}}
+  Real time.
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+{{{
+#int MIDIDeviceSendRealTime   (
+  struct  * device,
+   status  )
+}}}
+  
+  
+
+*Parameters*:
+  a   And two parameters. 
+  b   Here's the second. 
+*Returns*:
+  And a return value!
+
+---
+|| [MIDIKit_docs Main Page] || [MIDIKit_docs_files Files] ||
