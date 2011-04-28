@@ -1,5 +1,4 @@
-
-#summary Endpoint for message based communication. 
+﻿#summary Endpoint for message based communication. 
 #labels Documentation, Struct, Public
 
 = MIDIPort =
