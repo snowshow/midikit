@@ -1,6 +1,6 @@
-#sidebar wiki/contents
-#summary Endpoint for message based communication. 
-#labels Documentation, Struct
+#summary Endpoint for message based communication.
+#labels Documentation,Struct
+#sidebar contents
 
 = MIDIPort =
 Endpoint for message based communication. 
