@@ -1,10 +1,16 @@
+#sidebar wiki/contents
 #summary Provider for accurate timestamps. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIClock =
+Provider for accurate timestamps. 
+{{{
+#include <clock.h>
+
+struct MIDIClock;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------
@@ -235,7 +241,7 @@ Convert a timestamp that was created by a given clock to the timestamp of anothe
 `int`int MIDIClock::refsrefs`MIDITimestamp`MIDITimestamp MIDIClock::offsetoffset`MIDISamplingRate`MIDISamplingRate MIDIClock::raterate`unsigned long long`unsigned long long MIDIClock::numernumer`unsigned long long`unsigned long long MIDIClock::denomdenom
 
 --------------------------------------------------------------------------------
-== unknown ? ==
+== related ==
 
 
 --------------------------------------------------------------------------------

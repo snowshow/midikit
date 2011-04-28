@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary A basic event consisting of an id, a message and arbitary optional data. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIEvent =
+A basic event consisting of an id, a message and arbitary optional data. 
+{{{
+
+struct MIDIEvent;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

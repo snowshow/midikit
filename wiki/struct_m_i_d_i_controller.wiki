@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary Convenience class to handle control changes. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIController =
+Convenience class to handle control changes. 
+{{{
+
+struct MIDIController;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

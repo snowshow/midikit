@@ -1,10 +1,16 @@
+#sidebar wiki/contents
 #summary Structure of MIDI message object. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIMessage =
+Structure of MIDI message object. 
+{{{
+#include <message.h>
+
+struct MIDIMessage;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

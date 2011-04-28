@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary  implementation using the opensoundcontrol protocol. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIDriverOSC =
+[struct_m_i_d_i_driver MIDIDriver] implementation using the opensoundcontrol protocol. 
+{{{
+
+struct MIDIDriverOSC;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

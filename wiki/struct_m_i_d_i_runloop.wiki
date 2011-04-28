@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIRunloop =
 
-<wiki:toc max_depth="3"/>
+{{{
 
+struct MIDIRunloop;
+}}}
+
+<wiki:toc max_depth="3"/>
 
 
 --------------------------------------------------------------------------------

@@ -1,10 +1,16 @@
+#sidebar wiki/contents
 #summary Endpoint for message based communication. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIPort =
+Endpoint for message based communication. 
+{{{
+#include <port.h>
+
+struct MIDIPort;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary Structure for easily removing journal parts by sequence number. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = RTPMIDIJournalChapterPart =
+Structure for easily removing journal parts by sequence number. 
+{{{
+
+struct RTPMIDIJournalChapterPart;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

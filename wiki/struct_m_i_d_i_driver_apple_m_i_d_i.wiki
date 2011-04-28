@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary  implementation using Apple's network MIDI protocol. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIDriverAppleMIDI =
+[struct_m_i_d_i_driver MIDIDriver] implementation using Apple's network MIDI protocol. 
+{{{
+
+struct MIDIDriverAppleMIDI;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------
@@ -46,7 +51,7 @@ Free all resources occupied by the driver.
 `struct [struct_m_i_d_i_driver MIDIDriver]`struct MIDIDriver MIDIDriverAppleMIDI::basebase`int`int MIDIDriverAppleMIDI::control_socketcontrol_socket`int`int MIDIDriverAppleMIDI::rtp_socketrtp_socket`unsigned short`unsigned short MIDIDriverAppleMIDI::portport`unsigned char`unsigned char MIDIDriverAppleMIDI::acceptaccept`unsigned char`unsigned char MIDIDriverAppleMIDI::syncsync`unsigned long`unsigned long MIDIDriverAppleMIDI::tokentoken`char`char MIDIDriverAppleMIDI::name[32][32]name`struct AppleMIDICommand`struct AppleMIDICommand MIDIDriverAppleMIDI::commandcommand`struct [struct_r_t_p_peer RTPPeer] *`struct RTPPeer* MIDIDriverAppleMIDI::peerpeer`struct [struct_r_t_p_session RTPSession] *`struct RTPSession* MIDIDriverAppleMIDI::rtp_sessionrtp_session`struct [struct_r_t_p_m_i_d_i_session RTPMIDISession] *`struct RTPMIDISession* MIDIDriverAppleMIDI::rtpmidi_sessionrtpmidi_session`struct [struct_m_i_d_i_message_queue MIDIMessageQueue] *`struct MIDIMessageQueue* MIDIDriverAppleMIDI::in_queuein_queue`struct [struct_m_i_d_i_message_queue MIDIMessageQueue] *`struct MIDIMessageQueue* MIDIDriverAppleMIDI::out_queueout_queue
 
 --------------------------------------------------------------------------------
-== unknown ? ==
+== public-func ==
 
 
 --------------------------------------------------------------------------------

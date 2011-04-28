@@ -1,10 +1,16 @@
+#sidebar wiki/contents
 #summary Message format descriptor. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIMessageFormat =
+Message format descriptor. 
+{{{
+#include <message_format.h>
+
+struct MIDIMessageFormat;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------
@@ -114,7 +120,7 @@ Decode multiple message objects from a buffer and use running status coding.
 `int(*`int(* MIDIMessageFormat::test)(void *buffer))(void *buffer)test`int(*`int(* MIDIMessageFormat::size)(struct MIDIMessageData *data, size_t *size))(struct MIDIMessageData *data, size_t *size)size`int(*`int(* MIDIMessageFormat::set)(struct MIDIMessageData *data, MIDIProperty property, size_t size, void *value))(struct MIDIMessageData *data, MIDIProperty property, size_t size, void *value)set`int(*`int(* MIDIMessageFormat::get)(struct MIDIMessageData *data, MIDIProperty property, size_t size, void *value))(struct MIDIMessageData *data, MIDIProperty property, size_t size, void *value)get`int(*`int(* MIDIMessageFormat::encode)(struct MIDIMessageData *data, MIDIRunningStatus *status, size_t size, void *buffer, size_t *written))(struct MIDIMessageData *data, MIDIRunningStatus *status, size_t size, void *buffer, size_t *written)encode`int(*`int(* MIDIMessageFormat::decode)(struct MIDIMessageData *data, MIDIRunningStatus *status, size_t size, void *buffer, size_t *read))(struct MIDIMessageData *data, MIDIRunningStatus *status, size_t size, void *buffer, size_t *read)decode
 
 --------------------------------------------------------------------------------
-== unknown ? ==
+== public-func ==
 
 
 --------------------------------------------------------------------------------

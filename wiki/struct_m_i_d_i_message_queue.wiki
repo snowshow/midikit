@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary Queue for MIDI message objects. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIMessageQueue =
+Queue for MIDI message objects. 
+{{{
+
+struct MIDIMessageQueue;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

@@ -1,0 +1,32 @@
+#sidebar wiki/contents
+#summary 
+#labels Documentation, Group
+
+= MIDI =
+
+<wiki:toc max_depth="3"/>
+
+
+--------------------------------------------------------------------------------
+== Defines == 
+
+
+--------------------------------------------------------------------------------
+
+=== `MIDI_DRIVER_WILL_SEND_MESSAGE` ===
+MIDI driver will send a message. 
+{{{
+#define MIDI_DRIVER_WILL_SEND_MESSAGE0;
+}}}
+
+This is called by the driver interface before it will send a message to the implementation. Return a value other than 0 to cancel the sending. The info pointer points the the message that will be sent. 
+
+--------------------------------------------------------------------------------
+
+=== `MIDI_DRIVER_WILL_RECEIVE_MESSAGE` ===
+MIDI driver will receive a message. 
+{{{
+#define MIDI_DRIVER_WILL_RECEIVE_MESSAGE1;
+}}}
+
+This is called by the driver interface after it has been notified (by the implementation) that a new message was received. The interface will then deliver it to all connected devices unless the callback returned a value other than 0. The info pointer points to the message that will be received. 

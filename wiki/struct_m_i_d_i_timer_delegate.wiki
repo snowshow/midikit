@@ -1,7 +1,12 @@
+#sidebar wiki/contents
 #summary 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDITimerDelegate =
 
-<wiki:toc max_depth="3"/>
+{{{
 
+struct MIDITimerDelegate;
+}}}
+
+<wiki:toc max_depth="3"/>

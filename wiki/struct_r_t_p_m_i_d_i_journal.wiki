@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary Hold information for the RTP-MIDI session history. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = RTPMIDIJournal =
+Hold information for the RTP-MIDI session history. 
+{{{
+
+struct RTPMIDIJournal;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

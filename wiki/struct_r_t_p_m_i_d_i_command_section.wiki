@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary MIDI command section The MIDI command section has the following format: 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = RTPMIDICommandSection =
+MIDI command section The MIDI command section has the following format: 
+{{{
+
+struct RTPMIDICommandSection;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

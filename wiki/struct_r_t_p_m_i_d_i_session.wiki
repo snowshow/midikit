@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary Send and receive 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = RTPMIDISession =
+Send and receive `[struct_m_i_d_i_message MIDIMessage]` objects via an `[struct_r_t_p_session RTPSession]`. 
+{{{
+
+struct RTPMIDISession;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

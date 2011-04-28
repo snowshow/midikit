@@ -1,10 +1,16 @@
+#sidebar wiki/contents
 #summary Store any kind of MIDI message. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIMessageData =
+Store any kind of MIDI message. 
+{{{
+#include <message_format.h>
+
+struct MIDIMessageData;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

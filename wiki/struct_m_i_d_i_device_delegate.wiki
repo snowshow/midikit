@@ -1,10 +1,16 @@
+#sidebar wiki/contents
 #summary Delegate to respond to received messages. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIDeviceDelegate =
+Delegate to respond to received messages. 
+{{{
+#include <device.h>
+
+struct MIDIDeviceDelegate;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

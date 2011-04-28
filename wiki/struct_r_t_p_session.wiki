@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary An RTP session that may be connected to multiple peers. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = RTPSession =
+An RTP session that may be connected to multiple peers. 
+{{{
+
+struct RTPSession;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------
@@ -82,7 +87,7 @@ Decrement the reference counter of a session. If the reference count reached zer
 `size_t`size_t RTPSession::refsrefs`int`int RTPSession::socketsocket`struct [struct_r_t_p_address RTPAddress]`struct RTPAddress RTPSession::selfself`struct [struct_r_t_p_peer RTPPeer] *`struct RTPPeer* RTPSession::peers[RTP_MAX_PEERS][RTP_MAX_PEERS]peers`struct [struct_r_t_p_packet_info RTPPacketInfo]`struct RTPPacketInfo RTPSession::infoinfo`struct iovec`struct iovec RTPSession::iov[RTP_IOV_LEN][RTP_IOV_LEN]iov`size_t`size_t RTPSession::buflenbuflen`void *`void* RTPSession::bufferbuffer
 
 --------------------------------------------------------------------------------
-== unknown ? ==
+== public-func ==
 
 
 --------------------------------------------------------------------------------

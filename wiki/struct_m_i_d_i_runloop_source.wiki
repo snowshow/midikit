@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIRunloopSource =
 
-<wiki:toc max_depth="3"/>
+{{{
 
+struct MIDIRunloopSource;
+}}}
+
+<wiki:toc max_depth="3"/>
 
 
 --------------------------------------------------------------------------------
@@ -12,7 +17,7 @@
 `int`int MIDIRunloopSource::refsrefs`int`int MIDIRunloopSource::nfdsnfds`fd_set`fd_set MIDIRunloopSource::readfdsreadfds`fd_set`fd_set MIDIRunloopSource::writefdswritefds`struct timespec`struct timespec MIDIRunloopSource::timeout_starttimeout_start`struct timespec`struct timespec MIDIRunloopSource::timeout_timetimeout_time`struct MIDIRunloopSourceDelegate`struct MIDIRunloopSourceDelegate MIDIRunloopSource::delegatedelegate`struct MIDIRunloop *`struct MIDIRunloop* MIDIRunloopSource::runlooprunloop
 
 --------------------------------------------------------------------------------
-== unknown ? ==
+== public-func ==
 
 
 --------------------------------------------------------------------------------

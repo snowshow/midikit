@@ -1,10 +1,16 @@
+#sidebar wiki/contents
 #summary Abstract class to send MIDI messages with various drivers. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIDriver =
+Abstract class to send MIDI messages with various drivers. 
+{{{
+#include <driver.h>
+
+struct MIDIDriver;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

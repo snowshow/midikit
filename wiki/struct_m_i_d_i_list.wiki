@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary A list of MIDI objects of a common type. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIList =
+A list of MIDI objects of a common type. 
+{{{
+
+struct MIDIList;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

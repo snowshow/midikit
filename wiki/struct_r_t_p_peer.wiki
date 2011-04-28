@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary A control structure to manage the connection to an RTP peer. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = RTPPeer =
+A control structure to manage the connection to an RTP peer. 
+{{{
+
+struct RTPPeer;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------
@@ -12,7 +17,7 @@
 `size_t`size_t RTPPeer::refsrefs`struct [struct_r_t_p_address RTPAddress]`struct RTPAddress RTPPeer::addressaddress`unsigned long`unsigned long RTPPeer::in_timestampin_timestamp`unsigned long`unsigned long RTPPeer::out_timestampout_timestamp`unsigned long`unsigned long RTPPeer::in_seqnumin_seqnum`unsigned long`unsigned long RTPPeer::out_seqnumout_seqnum`void *`void* RTPPeer::infoinfo
 
 --------------------------------------------------------------------------------
-== unknown ? ==
+== public-func ==
 
 
 --------------------------------------------------------------------------------

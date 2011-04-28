@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary Journal section. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIRTPJournalSection =
+Journal section. 
+{{{
+
+struct MIDIRTPJournalSection;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

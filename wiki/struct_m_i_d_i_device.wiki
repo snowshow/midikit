@@ -1,10 +1,16 @@
+#sidebar wiki/contents
 #summary An abstract MIDI device. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = MIDIDevice =
+An abstract MIDI device. 
+{{{
+#include <device.h>
+
+struct MIDIDevice;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

@@ -1,10 +1,16 @@
+#sidebar wiki/contents
 #summary RTP packet information. 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = RTPPacketInfo =
+RTP packet information. 
+{{{
+#include <rtp.h>
+
+struct RTPPacketInfo;
+}}}
 
 <wiki:toc max_depth="3"/>
-
 
 
 --------------------------------------------------------------------------------

@@ -1,10 +1,15 @@
+#sidebar wiki/contents
 #summary 
-#labels Documentation, Struct, Public
+#labels Documentation, Struct
 
 = RTPMIDIPeerInfo =
 
-<wiki:toc max_depth="3"/>
+{{{
 
+struct RTPMIDIPeerInfo;
+}}}
+
+<wiki:toc max_depth="3"/>
 
 
 --------------------------------------------------------------------------------
