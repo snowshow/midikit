@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary Journal section. 
 #labels Documentation, Struct
 
@@ -9,6 +9,14 @@ Journal section.
 struct MIDIRTPJournalSection;
 }}}
 
+     0                   1                   2                   3
+     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |S|Y|A|H|TOTCHAN|   Checkpoint Packet Seqnum    | S-journal ... |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |                      Channel journals ...                     |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ 
 <wiki:toc max_depth="3"/>
 
 

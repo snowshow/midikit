@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary Hold information for the RTP-MIDI session history. 
 #labels Documentation, Struct
 

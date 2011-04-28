@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary Structure for easily removing journal parts by sequence number. 
 #labels Documentation, Struct
 

@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary Provider for accurate timestamps. 
 #labels Documentation, Struct
 
@@ -9,7 +9,7 @@ Provider for accurate timestamps.
 
 struct MIDIClock;
 }}}
-
+The [struct_m_i_d_i_clock MIDIClock] provides accurate timestamps at any desired rate with a selectable offset. 
 <wiki:toc max_depth="3"/>
 
 

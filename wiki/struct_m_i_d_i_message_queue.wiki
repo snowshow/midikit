@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary Queue for MIDI message objects. 
 #labels Documentation, Struct
 

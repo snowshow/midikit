@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary 
 #labels Documentation, Group
 

@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary Delegate to respond to received messages. 
 #labels Documentation, Struct
 
@@ -9,7 +9,7 @@ Delegate to respond to received messages.
 
 struct MIDIDeviceDelegate;
 }}}
-
+Every time the device receives a message, the device calls one of these callbacks (if available) with the message properties. 
 <wiki:toc max_depth="3"/>
 
 

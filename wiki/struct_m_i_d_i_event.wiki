@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary A basic event consisting of an id, a message and arbitary optional data. 
 #labels Documentation, Struct
 

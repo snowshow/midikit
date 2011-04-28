@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary A list of MIDI objects of a common type. 
 #labels Documentation, Struct
 
@@ -8,7 +8,7 @@ A list of MIDI objects of a common type.
 
 struct MIDIList;
 }}}
-
+I realize that this a general purpose linked list and should not be restricted to MIDIKit use as the MIDI-prefix might indicate. I will evaluate and extract general purpose code at a later point. 
 <wiki:toc max_depth="3"/>
 
 

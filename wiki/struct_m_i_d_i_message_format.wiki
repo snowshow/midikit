@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary Message format descriptor. 
 #labels Documentation, Struct
 
@@ -9,7 +9,7 @@ Message format descriptor.
 
 struct MIDIMessageFormat;
 }}}
-
+Contains pointers to functions that access messages of a certain type. [struct_m_i_d_i_message_data MIDIMessageData]
 <wiki:toc max_depth="3"/>
 
 

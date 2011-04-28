@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary Abstract class to send MIDI messages with various drivers. 
 #labels Documentation, Struct
 
@@ -9,7 +9,7 @@ Abstract class to send MIDI messages with various drivers.
 
 struct MIDIDriver;
 }}}
-
+The [struct_m_i_d_i_driver MIDIDriver] is an abstract class / interface that can be used to pass messages to an underlying implementation. Extend this class by using it as the first member in your driver implementation structure. The C-standard asserts that there is no unnamed padding at the beginning of a struct. Extended structs can be used whereever a `[struct_m_i_d_i_driver MIDIDriver]` struct is expected. 
 <wiki:toc max_depth="3"/>
 
 

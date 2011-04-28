@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary A control structure to manage the connection to an RTP peer. 
 #labels Documentation, Struct
 

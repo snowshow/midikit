@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary An abstract MIDI device. 
 #labels Documentation, Struct
 
@@ -9,7 +9,7 @@ An abstract MIDI device.
 
 struct MIDIDevice;
 }}}
-
+The [struct_m_i_d_i_device MIDIDevice] class provides a skeleton for customized MIDI devices. Standardized functionality can be plugged in by using MIDITimer, [struct_m_i_d_i_controller MIDIController] and MIDIInstrument objects. Every [struct_m_i_d_i_device MIDIDevice] is equipped with an input, an output and a thru-port that forwards every [struct_m_i_d_i_message MIDIMessage] received on the input. 
 <wiki:toc max_depth="3"/>
 
 

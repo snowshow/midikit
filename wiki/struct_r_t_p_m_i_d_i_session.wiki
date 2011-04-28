@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary Send and receive 
 #labels Documentation, Struct
 
@@ -8,7 +8,7 @@ Send and receive `[struct_m_i_d_i_message MIDIMessage]` objects via an `[struct_
 
 struct RTPMIDISession;
 }}}
-
+This class describes a payload format to code MIDI messages as RTP payload. It extends the `[struct_r_t_p_session RTPSession]` by methods to send and receive `[struct_m_i_d_i_message MIDIMessage]` objects. For implementation details refer to RFC 4695 & 4696. 
 <wiki:toc max_depth="3"/>
 
 

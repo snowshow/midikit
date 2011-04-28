@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary  implementation using the opensoundcontrol protocol. 
 #labels Documentation, Struct
 

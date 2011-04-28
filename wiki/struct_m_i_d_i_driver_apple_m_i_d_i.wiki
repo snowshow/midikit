@@ -1,4 +1,4 @@
-#sidebar wiki/contents
+#sidebar contents
 #summary  implementation using Apple's network MIDI protocol. 
 #labels Documentation, Struct
 
