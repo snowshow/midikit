@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDINRPList =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`struct MIDINonRegisteredParameter *`struct MIDINonRegisteredParameter* MIDINRPList::parameterparameter`struct MIDINRPList *`struct MIDINRPList* MIDINRPList::nextnext

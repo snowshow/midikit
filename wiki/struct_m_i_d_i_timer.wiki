@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDITimer =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`int`int MIDITimer::refsrefs`struct MIDITimerDelegate *`struct MIDITimerDelegate* MIDITimer::delegatedelegate`MIDILongValue`MIDILongValue MIDITimer::song_positionsong_position`MIDILongValue`MIDILongValue MIDITimer::beats_per_minutebeats_per_minute`MIDITimestamp`MIDITimestamp MIDITimer::last_timestamplast_timestamp`MIDITimestamp`MIDITimestamp MIDITimer::clocks[4][4]clocks

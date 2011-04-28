@@ -1,0 +1,85 @@
+#summary A basic event consisting of an id, a message and arbitary optional data. 
+#labels Documentation, Struct, Public
+
+= MIDIEvent =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Creation and destruction ==
+Creating, destroying and reference counting of [struct_m_i_d_i_event MIDIEvent] objects. 
+
+--------------------------------------------------------------------------------
+
+=== `struct MIDIEvent * MIDIEventCreate` ===
+Create a [struct_m_i_d_i_event MIDIEvent] instance. 
+{{{
+struct MIDIEvent * MIDIEventCreate(size_t id, void *info, char *message,...);
+}}}
+
+Allocate space and initialize a [struct_m_i_d_i_event MIDIEvent] instance.
+
+
+==== Parameters ====
+|| *Name* || *Description * ||
+|| id || A (hopefully) unique ID.  ||
+|| info || Any optional data to be associated with the event.  ||
+|| message || A message format that may contain placeholders.  ||
+|| ... || The data to be filled into the message format placeholders. (Refer to the sprintf specification for details.)  ||
+
+==== Return ====
+a pointer to the created event structure on success. a `NULL` pointer if the event could not created. 
+
+--------------------------------------------------------------------------------
+
+=== `void MIDIEventDestroy` ===
+Destroy a [struct_m_i_d_i_event MIDIEvent] instance. 
+{{{
+void MIDIEventDestroy(struct MIDIEvent *event);
+}}}
+
+Free all resources occupied by the event and release all referenced objects.
+
+
+==== Parameters ====
+|| *Name* || *Description * ||
+|| event || The event.  ||
+
+
+--------------------------------------------------------------------------------
+
+=== `void MIDIEventRetain` ===
+Retain a [struct_m_i_d_i_event MIDIEvent] instance. 
+{{{
+void MIDIEventRetain(struct MIDIEvent *event);
+}}}
+
+Increment the reference counter of an event so that it won't be destroyed.
+
+
+==== Parameters ====
+|| *Name* || *Description * ||
+|| event || The event.  ||
+
+
+--------------------------------------------------------------------------------
+
+=== `void MIDIEventRelease` ===
+Release a [struct_m_i_d_i_event MIDIEvent] instance. 
+{{{
+void MIDIEventRelease(struct MIDIEvent *event);
+}}}
+
+Decrement the reference counter of an event. If the reference count reached zero, destroy the event.
+
+
+==== Parameters ====
+|| *Name* || *Description * ||
+|| event || The event.  ||
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`int`int MIDIEvent::refsrefs`size_t`size_t MIDIEvent::idid`size_t`size_t MIDIEvent::lengthlength`char *`char* MIDIEvent::messagemessage`void *`void* MIDIEvent::infoinfo

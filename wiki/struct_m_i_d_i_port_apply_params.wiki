@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDIPortApplyParams =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`struct [struct_m_i_d_i_port MIDIPort] *`struct MIDIPort* MIDIPortApplyParams::portportsource port `struct MIDITypeSpec *`struct MIDITypeSpec* MIDIPortApplyParams::typetypemessage type `void *`void* MIDIPortApplyParams::objectobjectmessage data 

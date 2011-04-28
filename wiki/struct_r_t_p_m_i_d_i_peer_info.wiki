@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= RTPMIDIPeerInfo =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`struct [struct_r_t_p_m_i_d_i_journal RTPMIDIJournal] *`struct RTPMIDIJournal* RTPMIDIPeerInfo::receive_journalreceive_journal`struct [struct_r_t_p_m_i_d_i_journal RTPMIDIJournal] *`struct RTPMIDIJournal* RTPMIDIPeerInfo::send_journalsend_journal`void *`void* RTPMIDIPeerInfo::infoinfo

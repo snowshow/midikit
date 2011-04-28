@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= AppleMIDICommand =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`struct [struct_r_t_p_peer RTPPeer] *`struct RTPPeer* AppleMIDICommand::peerpeer`struct sockaddr_storage`struct sockaddr_storage AppleMIDICommand::addraddr`socklen_t`socklen_t AppleMIDICommand::sizesize`unsigned short`unsigned short AppleMIDICommand::typetype`unsigned long`unsigned long AppleMIDICommand::versionversion`unsigned long`unsigned long AppleMIDICommand::tokentoken`unsigned long`unsigned long AppleMIDICommand::ssrcssrc`char`char AppleMIDICommand::name[64][64]name`struct AppleMIDICommand::@1::@2`struct AppleMIDICommand::@1::@2  AppleMIDICommand::sessionsession`unsigned long`unsigned long AppleMIDICommand::countcount`unsigned long long`unsigned long long AppleMIDICommand::timestamp1timestamp1`unsigned long long`unsigned long long AppleMIDICommand::timestamp2timestamp2`unsigned long long`unsigned long long AppleMIDICommand::timestamp3timestamp3`struct AppleMIDICommand::@1::@3`struct AppleMIDICommand::@1::@3  AppleMIDICommand::syncsync`unsigned long`unsigned long AppleMIDICommand::seqnumseqnum`struct AppleMIDICommand::@1::@4`struct AppleMIDICommand::@1::@4  AppleMIDICommand::feedbackfeedback`union AppleMIDICommand::@1`union AppleMIDICommand::@1  AppleMIDICommand::datadata

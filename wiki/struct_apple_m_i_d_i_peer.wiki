@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= AppleMIDIPeer =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`char *`char* AppleMIDIPeer::namename`unsigned short`unsigned short AppleMIDIPeer::portport`unsigned long`unsigned long AppleMIDIPeer::tokentoken`unsigned long`unsigned long AppleMIDIPeer::ssrcssrc`unsigned long long`unsigned long long AppleMIDIPeer::timestamp_delaytimestamp_delay`unsigned long long`unsigned long long AppleMIDIPeer::timestamp_difftimestamp_diff`struct RTPMIDIPeer *`struct RTPMIDIPeer* AppleMIDIPeer::rtp_peerrtp_peer

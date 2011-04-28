@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDINonRegisteredParameter =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`MIDILongValue`MIDILongValue MIDINonRegisteredParameter::numbernumber`MIDILongValue`MIDILongValue MIDINonRegisteredParameter::valuevalue

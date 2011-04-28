@@ -1,0 +1,12 @@
+#summary An RTP address consisting of an internet-address (socket with length) and a synchronization source identifier. 
+#labels Documentation, Struct, Public
+
+= RTPAddress =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`unsigned long`unsigned long RTPAddress::ssrcssrc`socklen_t`socklen_t RTPAddress::sizesize`struct sockaddr_storage`struct sockaddr_storage RTPAddress::addraddr

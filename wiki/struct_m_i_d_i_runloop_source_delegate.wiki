@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDIRunloopSourceDelegate =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`void *`void* MIDIRunloopSourceDelegate::infoinfo`int(*`int(* MIDIRunloopSourceDelegate::read)(void *info, int nfds, fd_set *readfds))(void *info, int nfds, fd_set *readfds)read`int(*`int(* MIDIRunloopSourceDelegate::write)(void *info, int nfds, fd_set *readfds))(void *info, int nfds, fd_set *readfds)write`int(*`int(* MIDIRunloopSourceDelegate::timeout)(void *info, struct timespec *elapsed))(void *info, struct timespec *elapsed)timeout

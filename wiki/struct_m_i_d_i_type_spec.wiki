@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDITypeSpec =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`size_t`size_t MIDITypeSpec::type_idtype_id`char *`char* MIDITypeSpec::type_nametype_name`size_t`size_t MIDITypeSpec::sizesize`MIDIRefFn *`MIDIRefFn* MIDITypeSpec::retainretain`MIDIRefFn *`MIDIRefFn* MIDITypeSpec::releaserelease`MIDICoderFn *`MIDICoderFn* MIDITypeSpec::encodeencode`MIDICoderFn *`MIDICoderFn* MIDITypeSpec::decodedecode

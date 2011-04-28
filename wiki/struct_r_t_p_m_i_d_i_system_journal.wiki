@@ -1,0 +1,12 @@
+#summary Hold information for the system history. 
+#labels Documentation, Struct, Public
+
+= RTPMIDISystemJournal =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`unsigned short`unsigned short RTPMIDISystemJournal::checkpoint_pkt_seqnumcheckpoint_pkt_seqnumThe latest RTP sequence number encoded in the journal. `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDISystemJournal::chapter_dchapter_dChapter D: Song Select (0xf3), Tune Request (0xf6), Reset (0xff), undefined System commands (0xf4, 0xf5, 0xf9, 0xfd) `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDISystemJournal::chapter_vchapter_vChapter V: Active Sense (0xfe) `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDISystemJournal::chapter_qchapter_qChapter Q: Sequencer State (0xf2, 0xf8, 0xf9, 0xfa, 0xfb, 0xfc) `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDISystemJournal::chapter_fchapter_fChapter F: MTC Tape Position (0xf1, 0xf0, 0x7f, 0xcc 0x01 0x01) `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDISystemJournal::chapter_xchapter_xChapter X: System Exclusive (all other 0xf0) 

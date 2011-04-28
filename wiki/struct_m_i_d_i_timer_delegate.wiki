@@ -1,0 +1,7 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDITimerDelegate =
+
+<wiki:toc max_depth="3"/>
+

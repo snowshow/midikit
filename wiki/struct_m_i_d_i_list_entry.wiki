@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDIListEntry =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`void *`void* MIDIListEntry::itemitem`struct MIDIListEntry *`struct MIDIListEntry* MIDIListEntry::nextnext

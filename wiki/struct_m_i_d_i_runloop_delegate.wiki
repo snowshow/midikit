@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDIRunloopDelegate =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`void *`void* MIDIRunloopDelegate::infoinfo`int(*`int(* MIDIRunloopDelegate::schedule_read)(void *info, int fd))(void *info, int fd)schedule_read`int(*`int(* MIDIRunloopDelegate::schedule_write)(void *info, int fd))(void *info, int fd)schedule_write`int(*`int(* MIDIRunloopDelegate::schedule_timeout)(void *info, struct timespec *))(void *info, struct timespec *)schedule_timeout`int(*`int(* MIDIRunloopDelegate::clear_read)(void *info, int fd))(void *info, int fd)clear_read`int(*`int(* MIDIRunloopDelegate::clear_write)(void *info, int fd))(void *info, int fd)clear_write`int(*`int(* MIDIRunloopDelegate::clear_timeout)(void *info, struct timespec *))(void *info, struct timespec *)clear_timeout

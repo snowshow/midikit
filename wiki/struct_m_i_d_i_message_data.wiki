@@ -1,0 +1,12 @@
+#summary Store any kind of MIDI message. 
+#labels Documentation, Struct, Public
+
+= MIDIMessageData =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`unsigned char`unsigned char MIDIMessageData::bytes[MIDI_MESSAGE_DATA_BYTES][MIDI_MESSAGE_DATA_BYTES]bytes`size_t`size_t MIDIMessageData::sizesize`void *`void* MIDIMessageData::datadata

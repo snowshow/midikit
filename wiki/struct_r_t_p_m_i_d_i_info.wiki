@@ -1,0 +1,12 @@
+#summary RTP-MIDI payload header. 
+#labels Documentation, Struct, Public
+
+= RTPMIDIInfo =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`unsigned char`unsigned char RTPMIDIInfo::journaljournal`unsigned char`unsigned char RTPMIDIInfo::zerozero`unsigned char`unsigned char RTPMIDIInfo::phantomphantom`int`int RTPMIDIInfo::lenlen

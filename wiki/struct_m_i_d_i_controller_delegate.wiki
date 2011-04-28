@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDIControllerDelegate =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`int(*`int(* MIDIControllerDelegate::recv_cc)(struct MIDIController *controller, struct MIDIDevice *device, MIDIChannel channel, MIDIControl control, MIDILongValue value))(struct MIDIController *controller, struct MIDIDevice *device, MIDIChannel channel, MIDIControl control, MIDILongValue value)recv_cc

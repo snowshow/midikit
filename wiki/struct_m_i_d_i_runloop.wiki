@@ -1,0 +1,12 @@
+#summary 
+#labels Documentation, Struct, Public
+
+= MIDIRunloop =
+
+<wiki:toc max_depth="3"/>
+
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+`int`int MIDIRunloop::refsrefs`int`int MIDIRunloop::activeactive`struct MIDIRunloopDelegate`struct MIDIRunloopDelegate MIDIRunloop::delegatedelegate`struct MIDIRunloopSource`struct MIDIRunloopSource MIDIRunloop::mastermaster`struct MIDIRunloopSource *`struct MIDIRunloopSource* MIDIRunloop::sources[MAX_RUNLOOP_SOURCES][MAX_RUNLOOP_SOURCES]sources
