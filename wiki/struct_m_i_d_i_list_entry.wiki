@@ -14,4 +14,9 @@ struct MIDIListEntry;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`void *`void* MIDIListEntry::itemitem`struct MIDIListEntry *`struct MIDIListEntry* MIDIListEntry::nextnext
+
+
+=== `void* MIDIListEntry::item` ===
+
+
+=== `struct MIDIListEntry* MIDIListEntry::next` ===

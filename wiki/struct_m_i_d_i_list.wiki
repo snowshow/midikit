@@ -13,6 +13,19 @@ I realize that this a general purpose linked list and should not be restricted t
 
 
 --------------------------------------------------------------------------------
+== Public Attributes == 
+
+
+=== `int MIDIList::refs` ===
+
+
+=== `struct MIDITypeSpec* MIDIList::type` ===
+
+
+=== `struct MIDIListEntry* MIDIList::data` ===
+
+
+--------------------------------------------------------------------------------
 == Creation and destruction ==
 Creating, destroying and reference counting of MIDIConnector objects. 
 
@@ -200,10 +213,6 @@ Call the given function once for every item in the list. Use the given `info` po
 || 0 || on success.  ||
 || >0 || otherwise.  ||
 
-
---------------------------------------------------------------------------------
-== Public Attributes == 
-`int`int MIDIList::refsrefs`struct MIDITypeSpec *`struct MIDITypeSpec* MIDIList::typetype`struct MIDIListEntry *`struct MIDIListEntry* MIDIList::datadata
 
 --------------------------------------------------------------------------------
 == Private Functions == 

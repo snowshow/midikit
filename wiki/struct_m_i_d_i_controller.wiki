@@ -13,6 +13,31 @@ The [struct_m_i_d_i_controller MIDIController] implements the full set of contro
 
 
 --------------------------------------------------------------------------------
+== Public Attributes == 
+
+
+=== `size_t MIDIController::refs` ===
+
+
+=== `struct MIDIControllerDelegate* MIDIController::delegate` ===
+
+
+=== `MIDILongValue MIDIController::current_parameter` ===
+
+
+=== `MIDIBoolean MIDIController::current_parameter_registered` ===
+
+
+=== `MIDIValue MIDIController::controls[N_CONTROLS]` ===
+
+
+=== `MIDIValue MIDIController::registered_parameters[6]` ===
+
+
+=== `struct MIDINRPList* MIDIController::list` ===
+
+
+--------------------------------------------------------------------------------
 == Creation and destruction ==
 Creating, destroying and reference counting of [struct_m_i_d_i_controller MIDIController] objects. 
 
@@ -286,8 +311,3 @@ This can be used to notify other devices when controls have been changed.
 || *Value* || *Description * ||
 || 0 || on success.  ||
 || 1 || if the message could not be sent.  ||
-
-
---------------------------------------------------------------------------------
-== Public Attributes == 
-`size_t`size_t MIDIController::refsrefs`struct MIDIControllerDelegate *`struct MIDIControllerDelegate* MIDIController::delegatedelegate`MIDILongValue`MIDILongValue MIDIController::current_parametercurrent_parameter`MIDIBoolean`MIDIBoolean MIDIController::current_parameter_registeredcurrent_parameter_registered`MIDIValue`MIDIValue MIDIController::controls[N_CONTROLS][N_CONTROLS]controls`MIDIValue`MIDIValue MIDIController::registered_parameters[6][6]registered_parameters`struct MIDINRPList *`struct MIDINRPList* MIDIController::listlist

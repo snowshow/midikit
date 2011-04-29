@@ -13,6 +13,22 @@ struct MIDIMessageQueue;
 
 
 --------------------------------------------------------------------------------
+== Public Attributes == 
+
+
+=== `home jpommerening Private midikit midi message_queue c size_t MIDIMessageQueue::refs` ===
+
+
+=== `size_t MIDIMessageQueue::length` ===
+
+
+=== `struct MIDIMessageList* MIDIMessageQueue::first` ===
+
+
+=== `struct MIDIMessageList* MIDIMessageQueue::last` ===
+
+
+--------------------------------------------------------------------------------
 == Creation and destruction ==
 Creating, destroying and reference counting of [struct_m_i_d_i_message_queue MIDIMessageQueue] objects. 
 
@@ -160,8 +176,3 @@ int MIDIMessageQueuePop(struct MIDIMessageQueue *queue, struct MIDIMessage **mes
 || *Value* || *Description * ||
 || 0 || on success.  ||
 || >0 || if the item could not be fetched or removed.  ||
-
-
---------------------------------------------------------------------------------
-== Public Attributes == 
-`home jpommerening Private midikit midi message_queue c size_t`home jpommerening Private midikit midi message_queue c size_t MIDIMessageQueue::refsrefs`size_t`size_t MIDIMessageQueue::lengthlength`struct MIDIMessageList *`struct MIDIMessageList* MIDIMessageQueue::firstfirst`struct MIDIMessageList *`struct MIDIMessageList* MIDIMessageQueue::lastlast

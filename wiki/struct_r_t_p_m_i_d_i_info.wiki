@@ -14,4 +14,15 @@ struct RTPMIDIInfo;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`unsigned char`unsigned char RTPMIDIInfo::journaljournal`unsigned char`unsigned char RTPMIDIInfo::zerozero`unsigned char`unsigned char RTPMIDIInfo::phantomphantom`int`int RTPMIDIInfo::lenlen
+
+
+=== `unsigned char RTPMIDIInfo::journal` ===
+
+
+=== `unsigned char RTPMIDIInfo::zero` ===
+
+
+=== `unsigned char RTPMIDIInfo::phantom` ===
+
+
+=== `int RTPMIDIInfo::len` ===

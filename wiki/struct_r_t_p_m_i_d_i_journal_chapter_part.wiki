@@ -14,4 +14,13 @@ struct RTPMIDIJournalChapterPart;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`unsigned short`unsigned short RTPMIDIJournalChapterPart::checkpoint_pkt_seqnumcheckpoint_pkt_seqnumThe RTP sequence number encoded in this journal part. `unsigned short`unsigned short RTPMIDIJournalChapterPart::lengthlengthNumber of bytes[] allocated. `unsigned char`unsigned char RTPMIDIJournalChapterPart::bytes[1][1]bytesVariable length array of chapter bytes. 
+
+
+=== `unsigned short RTPMIDIJournalChapterPart::checkpoint_pkt_seqnum` ===
+The RTP sequence number encoded in this journal part. 
+
+=== `unsigned short RTPMIDIJournalChapterPart::length` ===
+Number of bytes[] allocated. 
+
+=== `unsigned char RTPMIDIJournalChapterPart::bytes[1]` ===
+Variable length array of chapter bytes. 

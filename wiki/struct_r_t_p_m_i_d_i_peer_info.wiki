@@ -14,4 +14,12 @@ struct RTPMIDIPeerInfo;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`struct [struct_r_t_p_m_i_d_i_journal RTPMIDIJournal] *`struct RTPMIDIJournal* RTPMIDIPeerInfo::receive_journalreceive_journal`struct [struct_r_t_p_m_i_d_i_journal RTPMIDIJournal] *`struct RTPMIDIJournal* RTPMIDIPeerInfo::send_journalsend_journal`void *`void* RTPMIDIPeerInfo::infoinfo
+
+
+=== `struct RTPMIDIJournal* RTPMIDIPeerInfo::receive_journal` ===
+
+
+=== `struct RTPMIDIJournal* RTPMIDIPeerInfo::send_journal` ===
+
+
+=== `void* RTPMIDIPeerInfo::info` ===

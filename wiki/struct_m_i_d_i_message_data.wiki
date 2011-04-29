@@ -17,4 +17,12 @@ The size and data fields are only used for system exclusive messages. Those mess
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`unsigned char`unsigned char MIDIMessageData::bytes[MIDI_MESSAGE_DATA_BYTES][MIDI_MESSAGE_DATA_BYTES]bytes`size_t`size_t MIDIMessageData::sizesize`void *`void* MIDIMessageData::datadata
+
+
+=== `unsigned char MIDIMessageData::bytes[MIDI_MESSAGE_DATA_BYTES]` ===
+
+
+=== `size_t MIDIMessageData::size` ===
+
+
+=== `void* MIDIMessageData::data` ===

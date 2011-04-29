@@ -92,52 +92,6 @@ Methods to connect ports and pass messages between them.
 
 --------------------------------------------------------------------------------
 
-=== `static int _port_intercept` ===
-Intercept messages. 
-{{{
-static int _port_intercept(struct MIDIPort *port, int mode, struct MIDITypeSpec *type, void *object);
-}}}
-
-Handle every incoming or outgoing message. To cancel the processing of the message a value not equal to 0 can be returned.
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| port || The port.  ||
-|| mode || The mode of operation that is intercepted.  ||
-|| type || The type of the message.  ||
-|| object || The message.  ||
-
-==== Return Values ====
-|| *Value* || *Description * ||
-|| 0 || on success.  ||
-
-
---------------------------------------------------------------------------------
-
-=== `static int _port_passthrough` ===
-Handle the internal passthrough. 
-{{{
-static int _port_passthrough(struct MIDIPort *port, struct MIDIPort *source, struct MIDITypeSpec *type, void *object);
-}}}
-
-Forward the received message to all connected ports.
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| port || The source port for the forwarded messages.  ||
-|| source || The source port of the incoming message.  ||
-|| type || The type of the message.  ||
-|| object || The message.  ||
-
-==== Return Values ====
-|| *Value* || *Description * ||
-|| 0 || on success.  ||
-
-
---------------------------------------------------------------------------------
-
 === `int MIDIPortConnect` ===
 Connect a port to another port. 
 {{{
@@ -327,69 +281,13 @@ Use the apply mechanism of the list to send the given message to all connected p
 
 
 --------------------------------------------------------------------------------
-== Public Attributes == 
-`int`int MIDIPort::refsrefs`int`int MIDIPort::modemode`int`int MIDIPort::validvalid`char *`char* MIDIPort::namename`void *`void* MIDIPort::targettarget`void *`void* MIDIPort::observerobserver`MIDIPortReceiveFn *`MIDIPortReceiveFn* MIDIPort::receivereceive`MIDIPortInterceptFn *`MIDIPortInterceptFn* MIDIPort::interceptintercept`struct [struct_m_i_d_i_list MIDIList] *`struct MIDIList* MIDIPort::portsports
-
---------------------------------------------------------------------------------
-== Private Functions == 
+== Related == 
 
 
 --------------------------------------------------------------------------------
 
-=== `static int _port_apply_send` ===
-Applier function to send to a port. 
+=== `MIDI_TYPE_SPEC_OBJECT` ===
+Declare the MIDIPortType type specification. 
 {{{
-static int _port_apply_send(void *item, void *info);
+MIDI_TYPE_SPEC_OBJECT( MIDIPort, 0x3000 );
 }}}
-
-This is used when a port sends data to all connected ports. If the port to send to was invalidated before, remove it from the list of connected ports. Send the message to the port otherwise.
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| item || A pointer to the `[struct_m_i_d_i_port MIDIPort]` to send to.  ||
-|| info || A pointer to the `MIDIPortApplyParams` structure that was passed to `MIDIListApply`.  ||
-
-==== Return Values ====
-|| *Value* || *Description * ||
-|| 0 || on success.  ||
-
-
---------------------------------------------------------------------------------
-
-=== `static int _port_apply_check` ===
-Applier function to release invalidated ports. 
-{{{
-static int _port_apply_check(void *item, void *info);
-}}}
-
-This is used to break retainment cycles.
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| item || A pointer to the `[struct_m_i_d_i_port MIDIPort]` to check.  ||
-|| info || A pointer to the `[struct_m_i_d_i_port MIDIPort]` that is connected to the port to check.  ||
-
-==== Return Values ====
-|| *Value* || *Description * ||
-|| 0 || on success.  ||
-
-
---------------------------------------------------------------------------------
-
-=== `static int _port_apply_disconnect` ===
-Applier function to disconnect a port from another. 
-{{{
-static int _port_apply_disconnect(void *item, void *info);
-}}}
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| item || A pointer to the `[struct_m_i_d_i_port MIDIPort]` to disconnect.  ||
-|| info || A pointer to the `[struct_m_i_d_i_port MIDIPort]` from which to disconnect the port.  ||
-
-==== Return Values ====
-|| *Value* || *Description * ||
-|| 0 || on success.  ||

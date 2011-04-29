@@ -3,13 +3,35 @@
 #labels Documentation, Struct
 
 = RTPMIDISession =
-Send and receive `[struct_m_i_d_i_message MIDIMessage]` objects via an `[struct_r_t_p_session RTPSession]`. 
+Send and receive [struct_m_i_d_i_message MIDIMessage] objects via an `[struct_r_t_p_session RTPSession]`. 
 {{{
 
 struct RTPMIDISession;
 }}}
-This class describes a payload format to code MIDI messages as RTP payload. It extends the `[struct_r_t_p_session RTPSession]` by methods to send and receive `[struct_m_i_d_i_message MIDIMessage]` objects. For implementation details refer to RFC 4695 & 4696. 
+This class describes a payload format to code MIDI messages as RTP payload. It extends the [struct_r_t_p_session RTPSession] by methods to send and receive [struct_m_i_d_i_message MIDIMessage] objects. For implementation details refer to RFC 4695 & 4696. 
 <wiki:toc max_depth="3"/>
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+
+
+=== `size_t RTPMIDISession::refs` ===
+
+
+=== `struct RTPMIDIInfo RTPMIDISession::midi_info` ===
+
+
+=== `struct RTPPacketInfo RTPMIDISession::rtp_info` ===
+
+
+=== `struct RTPSession* RTPMIDISession::rtp_session` ===
+
+
+=== `size_t RTPMIDISession::size` ===
+
+
+=== `void* RTPMIDISession::buffer` ===
 
 
 --------------------------------------------------------------------------------
@@ -84,7 +106,7 @@ Decrement the reference counter of a session. If the reference count reached zer
 
 --------------------------------------------------------------------------------
 == RTP transmission extension ==
-Sending and receiving `[struct_m_i_d_i_message MIDIMessage]` objects using the RTP-protocol. 
+Sending and receiving [struct_m_i_d_i_message MIDIMessage] objects using the RTP-protocol. 
 
 --------------------------------------------------------------------------------
 
@@ -232,8 +254,3 @@ int RTPMIDIPeerGetInfo(struct RTPPeer *peer, void **info);
 || *Value* || *Description * ||
 || 0 || on success.  ||
 || >0 || if the info-structure could not be obtained.  ||
-
-
---------------------------------------------------------------------------------
-== Public Attributes == 
-`size_t`size_t RTPMIDISession::refsrefs`struct [struct_r_t_p_m_i_d_i_info RTPMIDIInfo]`struct RTPMIDIInfo RTPMIDISession::midi_infomidi_info`struct [struct_r_t_p_packet_info RTPPacketInfo]`struct RTPPacketInfo RTPMIDISession::rtp_infortp_info`struct [struct_r_t_p_session RTPSession] *`struct RTPSession* RTPMIDISession::rtp_sessionrtp_session`size_t`size_t RTPMIDISession::sizesize`void *`void* RTPMIDISession::bufferbuffer

@@ -14,4 +14,24 @@ struct MIDITypeSpec;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`size_t`size_t MIDITypeSpec::type_idtype_id`char *`char* MIDITypeSpec::type_nametype_name`size_t`size_t MIDITypeSpec::sizesize`MIDIRefFn *`MIDIRefFn* MIDITypeSpec::retainretain`MIDIRefFn *`MIDIRefFn* MIDITypeSpec::releaserelease`MIDICoderFn *`MIDICoderFn* MIDITypeSpec::encodeencode`MIDICoderFn *`MIDICoderFn* MIDITypeSpec::decodedecode
+
+
+=== `size_t MIDITypeSpec::type_id` ===
+
+
+=== `char* MIDITypeSpec::type_name` ===
+
+
+=== `size_t MIDITypeSpec::size` ===
+
+
+=== `MIDIRefFn* MIDITypeSpec::retain` ===
+
+
+=== `MIDIRefFn* MIDITypeSpec::release` ===
+
+
+=== `MIDICoderFn* MIDITypeSpec::encode` ===
+
+
+=== `MIDICoderFn* MIDITypeSpec::decode` ===

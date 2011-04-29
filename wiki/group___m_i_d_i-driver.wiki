@@ -3,5 +3,5 @@
 #labels Documentation, Group
 
 = MIDI-driver =
-Implementations of the `[struct_m_i_d_i_driver MIDIDriver]` interface. 
+Implementations of the [struct_m_i_d_i_driver MIDIDriver] interface. 
 <wiki:toc max_depth="3"/>

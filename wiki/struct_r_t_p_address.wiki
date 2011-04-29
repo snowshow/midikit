@@ -14,4 +14,12 @@ struct RTPAddress;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`unsigned long`unsigned long RTPAddress::ssrcssrc`socklen_t`socklen_t RTPAddress::sizesize`struct sockaddr_storage`struct sockaddr_storage RTPAddress::addraddr
+
+
+=== `unsigned long RTPAddress::ssrc` ===
+
+
+=== `socklen_t RTPAddress::size` ===
+
+
+=== `struct sockaddr_storage RTPAddress::addr` ===

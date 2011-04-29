@@ -13,6 +13,31 @@ struct RTPMIDIJournal;
 
 
 --------------------------------------------------------------------------------
+== Public Attributes == 
+
+
+=== `unsigned char RTPMIDIJournal::enhanced_chapter_c` ===
+Use enhanced chapter C coding in at least one channel journal. 
+
+=== `unsigned char RTPMIDIJournal::total_channels` ===
+The number of valid entries in the channel journals list. 
+
+=== `unsigned short RTPMIDIJournal::checkpoint_pkt_seqnum` ===
+The latest RTP sequence number encoded in the journal. 
+
+=== `struct RTPMIDISystemJournal* RTPMIDIJournal::system_journal` ===
+
+
+=== `struct RTPMIDIChannelJournal* RTPMIDIJournal::channel_journals[16]` ===
+
+
+=== `size_t RTPMIDIJournal::size` ===
+
+
+=== `void* RTPMIDIJournal::buffer` ===
+
+
+--------------------------------------------------------------------------------
 == RTP-MIDI journal coding ==
 Functions for encoding the various journals and their chapters to a continuous stream of bytes. 
 
@@ -82,8 +107,3 @@ static int _rtpmidi_journal_decode_messages(struct RTPMIDIJournal *journal, unsi
 || journal || The journal.  ||
 || checkpoint || The sequence number of the packet that contains the messages.  ||
 || messages || The list to store the recovered messages in.  ||
-
-
---------------------------------------------------------------------------------
-== Public Attributes == 
-`unsigned char`unsigned char RTPMIDIJournal::enhanced_chapter_cenhanced_chapter_cUse enhanced chapter C coding in at least one channel journal. `unsigned char`unsigned char RTPMIDIJournal::total_channelstotal_channelsThe number of valid entries in the channel journals list. `unsigned short`unsigned short RTPMIDIJournal::checkpoint_pkt_seqnumcheckpoint_pkt_seqnumThe latest RTP sequence number encoded in the journal. `struct [struct_r_t_p_m_i_d_i_system_journal RTPMIDISystemJournal] *`struct RTPMIDISystemJournal* RTPMIDIJournal::system_journalsystem_journal`struct [struct_r_t_p_m_i_d_i_channel_journal RTPMIDIChannelJournal] *`struct RTPMIDIChannelJournal* RTPMIDIJournal::channel_journals[16][16]channel_journals`size_t`size_t RTPMIDIJournal::sizesize`void *`void* RTPMIDIJournal::bufferbuffer

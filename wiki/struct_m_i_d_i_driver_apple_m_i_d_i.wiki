@@ -13,6 +13,52 @@ struct MIDIDriverAppleMIDI;
 
 
 --------------------------------------------------------------------------------
+== Public Attributes == 
+
+
+=== `struct MIDIDriver MIDIDriverAppleMIDI::base` ===
+
+
+=== `int MIDIDriverAppleMIDI::control_socket` ===
+
+
+=== `int MIDIDriverAppleMIDI::rtp_socket` ===
+
+
+=== `unsigned short MIDIDriverAppleMIDI::port` ===
+
+
+=== `unsigned char MIDIDriverAppleMIDI::accept` ===
+
+
+=== `unsigned char MIDIDriverAppleMIDI::sync` ===
+
+
+=== `unsigned long MIDIDriverAppleMIDI::token` ===
+
+
+=== `char MIDIDriverAppleMIDI::name[32]` ===
+
+
+=== `struct AppleMIDICommand MIDIDriverAppleMIDI::command` ===
+
+
+=== `struct RTPPeer* MIDIDriverAppleMIDI::peer` ===
+
+
+=== `struct RTPSession* MIDIDriverAppleMIDI::rtp_session` ===
+
+
+=== `struct RTPMIDISession* MIDIDriverAppleMIDI::rtpmidi_session` ===
+
+
+=== `struct MIDIMessageQueue* MIDIDriverAppleMIDI::in_queue` ===
+
+
+=== `struct MIDIMessageQueue* MIDIDriverAppleMIDI::out_queue` ===
+
+
+--------------------------------------------------------------------------------
 == Creation and destruction ==
 Creating, destroying and reference counting of [struct_m_i_d_i_clock MIDIClock] objects. 
 
@@ -45,10 +91,6 @@ Free all resources occupied by the driver.
 || *Name* || *Description * ||
 || driver || The driver.  ||
 
-
---------------------------------------------------------------------------------
-== Public Attributes == 
-`struct [struct_m_i_d_i_driver MIDIDriver]`struct MIDIDriver MIDIDriverAppleMIDI::basebase`int`int MIDIDriverAppleMIDI::control_socketcontrol_socket`int`int MIDIDriverAppleMIDI::rtp_socketrtp_socket`unsigned short`unsigned short MIDIDriverAppleMIDI::portport`unsigned char`unsigned char MIDIDriverAppleMIDI::acceptaccept`unsigned char`unsigned char MIDIDriverAppleMIDI::syncsync`unsigned long`unsigned long MIDIDriverAppleMIDI::tokentoken`char`char MIDIDriverAppleMIDI::name[32][32]name`struct AppleMIDICommand`struct AppleMIDICommand MIDIDriverAppleMIDI::commandcommand`struct [struct_r_t_p_peer RTPPeer] *`struct RTPPeer* MIDIDriverAppleMIDI::peerpeer`struct [struct_r_t_p_session RTPSession] *`struct RTPSession* MIDIDriverAppleMIDI::rtp_sessionrtp_session`struct [struct_r_t_p_m_i_d_i_session RTPMIDISession] *`struct RTPMIDISession* MIDIDriverAppleMIDI::rtpmidi_sessionrtpmidi_session`struct [struct_m_i_d_i_message_queue MIDIMessageQueue] *`struct MIDIMessageQueue* MIDIDriverAppleMIDI::in_queuein_queue`struct [struct_m_i_d_i_message_queue MIDIMessageQueue] *`struct MIDIMessageQueue* MIDIDriverAppleMIDI::out_queueout_queue
 
 --------------------------------------------------------------------------------
 == public-func ==
@@ -106,7 +148,7 @@ Handle incoming MIDI messages.
 int MIDIDriverAppleMIDIReceiveMessage(struct MIDIDriverAppleMIDI *driver, struct MIDIMessage *message);
 }}}
 
-This is called by the RTP-MIDI payload parser whenever it encounters a new MIDI message. There may be multiple messages in a single packet so a single call of `[struct_m_i_d_i_driver_apple_m_i_d_i MIDIDriverAppleMIDI]` may trigger multiple calls of this function.
+This is called by the RTP-MIDI payload parser whenever it encounters a new MIDI message. There may be multiple messages in a single packet so a single call of [struct_m_i_d_i_driver_apple_m_i_d_i MIDIDriverAppleMIDI] may trigger multiple calls of this function.
 
 
 ==== Parameters ====
@@ -196,7 +238,7 @@ Disconnect from a peer.
 int MIDIDriverAppleMIDIRemovePeerWithSockaddr(struct MIDIDriverAppleMIDI *driver, socklen_t size, struct sockaddr *addr);
 }}}
 
-Use the AppleMIDI protocol to tell the peer that the session ended. Remove the peer from the `[struct_r_t_p_session RTPSession]`.
+Use the AppleMIDI protocol to tell the peer that the session ended. Remove the peer from the [struct_r_t_p_session RTPSession].
 
 
 ==== Parameters ====
@@ -219,7 +261,7 @@ Disconnect from a peer.
 int MIDIDriverAppleMIDIRemovePeer(struct MIDIDriverAppleMIDI *driver, char *address, unsigned short port);
 }}}
 
-Use the AppleMIDI protocol to tell the peer that the session ended. Remove the peer from the `[struct_r_t_p_session RTPSession]`.
+Use the AppleMIDI protocol to tell the peer that the session ended. Remove the peer from the [struct_r_t_p_session RTPSession].
 
 
 ==== Parameters ====

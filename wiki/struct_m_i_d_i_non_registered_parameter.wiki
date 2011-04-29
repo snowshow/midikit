@@ -14,4 +14,9 @@ struct MIDINonRegisteredParameter;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`MIDILongValue`MIDILongValue MIDINonRegisteredParameter::numbernumber`MIDILongValue`MIDILongValue MIDINonRegisteredParameter::valuevalue
+
+
+=== `MIDILongValue MIDINonRegisteredParameter::number` ===
+
+
+=== `MIDILongValue MIDINonRegisteredParameter::value` ===

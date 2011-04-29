@@ -14,6 +14,25 @@ The [struct_m_i_d_i_clock MIDIClock] provides accurate timestamps at any desired
 
 
 --------------------------------------------------------------------------------
+== Public Attributes == 
+
+
+=== `int MIDIClock::refs` ===
+
+
+=== `MIDITimestamp MIDIClock::offset` ===
+
+
+=== `MIDISamplingRate MIDIClock::rate` ===
+
+
+=== `unsigned long long MIDIClock::numer` ===
+
+
+=== `unsigned long long MIDIClock::denom` ===
+
+
+--------------------------------------------------------------------------------
 == Creation and destruction ==
 Creating, destroying and reference counting of [struct_m_i_d_i_clock MIDIClock] objects. 
 
@@ -237,11 +256,7 @@ Convert a timestamp that was created by a given clock to the timestamp of anothe
 
 
 --------------------------------------------------------------------------------
-== Public Attributes == 
-`int`int MIDIClock::refsrefs`MIDITimestamp`MIDITimestamp MIDIClock::offsetoffset`MIDISamplingRate`MIDISamplingRate MIDIClock::raterate`unsigned long long`unsigned long long MIDIClock::numernumer`unsigned long long`unsigned long long MIDIClock::denomdenom
-
---------------------------------------------------------------------------------
-== related ==
+== Related == 
 
 
 --------------------------------------------------------------------------------

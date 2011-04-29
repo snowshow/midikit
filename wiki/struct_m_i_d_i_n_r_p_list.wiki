@@ -14,4 +14,9 @@ struct MIDINRPList;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`struct MIDINonRegisteredParameter *`struct MIDINonRegisteredParameter* MIDINRPList::parameterparameter`struct MIDINRPList *`struct MIDINRPList* MIDINRPList::nextnext
+
+
+=== `struct MIDINonRegisteredParameter* MIDINRPList::parameter` ===
+
+
+=== `struct MIDINRPList* MIDINRPList::next` ===

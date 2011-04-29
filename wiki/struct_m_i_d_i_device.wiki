@@ -9,8 +9,39 @@ An abstract MIDI device.
 
 struct MIDIDevice;
 }}}
-The [struct_m_i_d_i_device MIDIDevice] class provides a skeleton for customized MIDI devices. Standardized functionality can be plugged in by using MIDITimer, [struct_m_i_d_i_controller MIDIController] and MIDIInstrument objects. Every [struct_m_i_d_i_device MIDIDevice] is equipped with an input, an output and a thru-port that forwards every [struct_m_i_d_i_message MIDIMessage] received on the input. 
+The [struct_m_i_d_i_device MIDIDevice] class provides a skeleton for customized MIDI devices. Standardized functionality can be plugged in by using [struct_m_i_d_i_timer MIDITimer], [struct_m_i_d_i_controller MIDIController] and MIDIInstrument objects. Every [struct_m_i_d_i_device MIDIDevice] is equipped with an input, an output and a thru-port that forwards every [struct_m_i_d_i_message MIDIMessage] received on the input. 
 <wiki:toc max_depth="3"/>
+
+
+--------------------------------------------------------------------------------
+== Public Attributes == 
+
+
+=== `int MIDIDevice::refs` ===
+
+
+=== `struct MIDIDeviceDelegate* MIDIDevice::delegate` ===
+
+
+=== `struct MIDIPort* MIDIDevice::in` ===
+
+
+=== `struct MIDIPort* MIDIDevice::out` ===
+
+
+=== `MIDIChannel MIDIDevice::base_channel` ===
+
+
+=== `MIDIBoolean MIDIDevice::omni_mode` ===
+
+
+=== `MIDIBoolean MIDIDevice::poly_mode` ===
+
+
+=== `struct MIDITimer* MIDIDevice::timer` ===
+
+
+=== `struct MIDIController* MIDIDevice::controller[N_CHANNEL]` ===
 
 
 --------------------------------------------------------------------------------
@@ -246,7 +277,7 @@ The controller is retained by the device, once for each channel it is connected 
 ==== Parameters ====
 || *Name* || *Description * ||
 || device || The midi device.  ||
-|| channel || The channel to attach the controller to. To attach the controller to the device's base channel use special `MIDI_CHANNEL_BASE`; to attach it to all channels at once, use `MIDI_CHANNEL_ALL`.  ||
+|| channel || The channel to attach the controller to. To attach the controller to the device's base channel use special MIDI_CHANNEL_BASE; to attach it to all channels at once, use MIDI_CHANNEL_ALL.  ||
 || controller || The controller to attach.  ||
 
 ==== Return Values ====
@@ -965,10 +996,6 @@ This is called when the device wants to send a "Real-Time" message. It can be us
 
 
 --------------------------------------------------------------------------------
-== Public Attributes == 
-`int`int MIDIDevice::refsrefs`struct [struct_m_i_d_i_device_delegate MIDIDeviceDelegate] *`struct MIDIDeviceDelegate* MIDIDevice::delegatedelegate`struct [struct_m_i_d_i_port MIDIPort] *`struct MIDIPort* MIDIDevice::inin`struct [struct_m_i_d_i_port MIDIPort] *`struct MIDIPort* MIDIDevice::outout`MIDIChannel`MIDIChannel MIDIDevice::base_channelbase_channel`MIDIBoolean`MIDIBoolean MIDIDevice::omni_modeomni_mode`MIDIBoolean`MIDIBoolean MIDIDevice::poly_modepoly_mode`struct MIDITimer *`struct MIDITimer* MIDIDevice::timertimer`struct [struct_m_i_d_i_controller MIDIController] *`struct MIDIController* MIDIDevice::controller[N_CHANNEL][N_CHANNEL]controller
-
---------------------------------------------------------------------------------
 == Private Functions == 
 
 
@@ -980,7 +1007,7 @@ Receive a generic MIDI message.
 static int _recv_msg(struct MIDIDevice *device, struct MIDIMessage *message);
 }}}
 
-This is called by the `IN` port whenever it relays a [struct_m_i_d_i_message MIDIMessage] to the device. Such a message may come from a `[struct_m_i_d_i_driver MIDIDriver]` or the `THRU` port of another device.
+This is called by the `IN` port whenever it relays a [struct_m_i_d_i_message MIDIMessage] to the device. Such a message may come from a [struct_m_i_d_i_driver MIDIDriver] or the `THRU` port of another device.
 
 The device determines the message type and calls the appropiate member function. If something is attached to the device's `THRU` port, the message is relayed via the port before the device processes the message. This implies that, when multiple devices are daisy-chained with their `THRU` ports, the last device in the chain will be the first device to process the message.
 

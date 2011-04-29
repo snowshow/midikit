@@ -14,4 +14,31 @@ struct RTPMIDIChannelJournal;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`unsigned short`unsigned short RTPMIDIChannelJournal::checkpoint_pkt_seqnumcheckpoint_pkt_seqnumThe latest RTP sequence number encoded in the journal. `unsigned char`unsigned char RTPMIDIChannelJournal::enhanced_chapter_cenhanced_chapter_cUse enhanced chapter C coding. `unsigned char`unsigned char RTPMIDIChannelJournal::channelchannelThe channel number. `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_pchapter_pChapter P: MIDI Program Change (0xc) `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_cchapter_cChapter C: MIDI Control Change (0xb) `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_mchapter_mChapter M: MIDI Parameter System (part of 0xb) `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_wchapter_wChapter W: MIDI Pitch Wheel (0xe) `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_nchapter_nChapter N: MIDI NoteOff (0x8), NoteOn (0x9) `struct [struct_r_t_p_m_i_d_i_journal_chapter_part RTPMIDIJournalChapterPart] *`struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_echapter_eChapter E: MIDI Note Command Extras (0x8, 0x9) 
+
+
+=== `unsigned short RTPMIDIChannelJournal::checkpoint_pkt_seqnum` ===
+The latest RTP sequence number encoded in the journal. 
+
+=== `unsigned char RTPMIDIChannelJournal::enhanced_chapter_c` ===
+Use enhanced chapter C coding. 
+
+=== `unsigned char RTPMIDIChannelJournal::channel` ===
+The channel number. 
+
+=== `struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_p` ===
+Chapter P: MIDI Program Change (0xc) 
+
+=== `struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_c` ===
+Chapter C: MIDI Control Change (0xb) 
+
+=== `struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_m` ===
+Chapter M: MIDI Parameter System (part of 0xb) 
+
+=== `struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_w` ===
+Chapter W: MIDI Pitch Wheel (0xe) 
+
+=== `struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_n` ===
+Chapter N: MIDI NoteOff (0x8), NoteOn (0x9) 
+
+=== `struct RTPMIDIJournalChapterPart* RTPMIDIChannelJournal::chapter_e` ===
+Chapter E: MIDI Note Command Extras (0x8, 0x9) 

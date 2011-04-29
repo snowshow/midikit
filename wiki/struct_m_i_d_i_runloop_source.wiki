@@ -14,7 +14,31 @@ struct MIDIRunloopSource;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`int`int MIDIRunloopSource::refsrefs`int`int MIDIRunloopSource::nfdsnfds`fd_set`fd_set MIDIRunloopSource::readfdsreadfds`fd_set`fd_set MIDIRunloopSource::writefdswritefds`struct timespec`struct timespec MIDIRunloopSource::timeout_starttimeout_start`struct timespec`struct timespec MIDIRunloopSource::timeout_timetimeout_time`struct MIDIRunloopSourceDelegate`struct MIDIRunloopSourceDelegate MIDIRunloopSource::delegatedelegate`struct MIDIRunloop *`struct MIDIRunloop* MIDIRunloopSource::runlooprunloop
+
+
+=== `int MIDIRunloopSource::refs` ===
+
+
+=== `int MIDIRunloopSource::nfds` ===
+
+
+=== `fd_set MIDIRunloopSource::readfds` ===
+
+
+=== `fd_set MIDIRunloopSource::writefds` ===
+
+
+=== `struct timespec MIDIRunloopSource::timeout_start` ===
+
+
+=== `struct timespec MIDIRunloopSource::timeout_time` ===
+
+
+=== `struct MIDIRunloopSourceDelegate MIDIRunloopSource::delegate` ===
+
+
+=== `struct MIDIRunloop* MIDIRunloopSource::runloop` ===
+
 
 --------------------------------------------------------------------------------
 == public-func ==

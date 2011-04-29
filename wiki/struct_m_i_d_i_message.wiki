@@ -260,24 +260,3 @@ Encode multiple message objects into a buffer and use running status coding.
 || *Value* || *Description * ||
 || 0 || on success.  ||
 || 1 || if the message could not be encoded.  ||
-
-
---------------------------------------------------------------------------------
-
-=== `static void _check_release_data` ===
-Release auxiliary data. 
-{{{
-static void _check_release_data(struct MIDIMessage *message);
-}}}
-
-Check if the message has auxiliary data (variable length sysex data) and release it if necessary.
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| message || The message.  ||
-
-
---------------------------------------------------------------------------------
-== Public Attributes == 
-`int`int MIDIMessage::refsrefs`struct [struct_m_i_d_i_message_format MIDIMessageFormat] *`struct MIDIMessageFormat* MIDIMessage::formatformat`struct [struct_m_i_d_i_message_data MIDIMessageData]`struct MIDIMessageData MIDIMessage::datadata`MIDITimestamp`MIDITimestamp MIDIMessage::timestamptimestamp

@@ -14,4 +14,9 @@ struct MIDIMessageList;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`struct [struct_m_i_d_i_message MIDIMessage] *`struct MIDIMessage* MIDIMessageList::messagemessage`struct MIDIMessageList *`struct MIDIMessageList* MIDIMessageList::nextnext
+
+
+=== `struct MIDIMessage* MIDIMessageList::message` ===
+
+
+=== `struct MIDIMessageList* MIDIMessageList::next` ===

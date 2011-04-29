@@ -14,4 +14,6 @@ struct MIDIControllerDelegate;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`int(*`int(* MIDIControllerDelegate::recv_cc)(struct MIDIController *controller, struct MIDIDevice *device, MIDIChannel channel, MIDIControl control, MIDILongValue value))(struct MIDIController *controller, struct MIDIDevice *device, MIDIChannel channel, MIDIControl control, MIDILongValue value)recv_cc
+
+
+=== `int(* MIDIControllerDelegate::recv_cc)(struct MIDIController *controller, struct MIDIDevice *device, MIDIChannel channel, MIDIControl control, MIDILongValue value)` ===

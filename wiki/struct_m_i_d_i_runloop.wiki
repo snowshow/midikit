@@ -14,4 +14,18 @@ struct MIDIRunloop;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`int`int MIDIRunloop::refsrefs`int`int MIDIRunloop::activeactive`struct MIDIRunloopDelegate`struct MIDIRunloopDelegate MIDIRunloop::delegatedelegate`struct MIDIRunloopSource`struct MIDIRunloopSource MIDIRunloop::mastermaster`struct MIDIRunloopSource *`struct MIDIRunloopSource* MIDIRunloop::sources[MAX_RUNLOOP_SOURCES][MAX_RUNLOOP_SOURCES]sources
+
+
+=== `int MIDIRunloop::refs` ===
+
+
+=== `int MIDIRunloop::active` ===
+
+
+=== `struct MIDIRunloopDelegate MIDIRunloop::delegate` ===
+
+
+=== `struct MIDIRunloopSource MIDIRunloop::master` ===
+
+
+=== `struct MIDIRunloopSource* MIDIRunloop::sources[MAX_RUNLOOP_SOURCES]` ===

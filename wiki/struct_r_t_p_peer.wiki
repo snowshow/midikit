@@ -14,7 +14,28 @@ struct RTPPeer;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`size_t`size_t RTPPeer::refsrefs`struct [struct_r_t_p_address RTPAddress]`struct RTPAddress RTPPeer::addressaddress`unsigned long`unsigned long RTPPeer::in_timestampin_timestamp`unsigned long`unsigned long RTPPeer::out_timestampout_timestamp`unsigned long`unsigned long RTPPeer::in_seqnumin_seqnum`unsigned long`unsigned long RTPPeer::out_seqnumout_seqnum`void *`void* RTPPeer::infoinfo
+
+
+=== `size_t RTPPeer::refs` ===
+
+
+=== `struct RTPAddress RTPPeer::address` ===
+
+
+=== `unsigned long RTPPeer::in_timestamp` ===
+
+
+=== `unsigned long RTPPeer::out_timestamp` ===
+
+
+=== `unsigned long RTPPeer::in_seqnum` ===
+
+
+=== `unsigned long RTPPeer::out_seqnum` ===
+
+
+=== `void* RTPPeer::info` ===
+
 
 --------------------------------------------------------------------------------
 == public-func ==

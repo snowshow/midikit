@@ -86,5 +86,94 @@ Decrement the reference counter of an event. If the reference count reached zero
 
 
 --------------------------------------------------------------------------------
-== Public Attributes == 
-`int`int MIDIEvent::refsrefs`size_t`size_t MIDIEvent::idid`size_t`size_t MIDIEvent::lengthlength`char *`char* MIDIEvent::messagemessage`void *`void* MIDIEvent::infoinfo
+== Property access ==
+Acces properties of MIDIEvents 
+
+--------------------------------------------------------------------------------
+
+=== `int MIDIEventGetId` ===
+Get the event identifier. 
+{{{
+int MIDIEventGetId(struct MIDIEvent *event, size_t *id);
+}}}
+
+
+==== Parameters ====
+|| *Name* || *Description * ||
+|| event || The event.  ||
+|| id || The ID.  ||
+
+==== Return Values ====
+|| *Value* || *Description * ||
+|| 0 || on success.  ||
+
+
+--------------------------------------------------------------------------------
+
+=== `int MIDIEventGetInfo` ===
+Get the event info-object. 
+{{{
+int MIDIEventGetInfo(struct MIDIEvent *event, void **info);
+}}}
+
+
+==== Parameters ====
+|| *Name* || *Description * ||
+|| event || The event.  ||
+|| info || The info.  ||
+
+==== Return Values ====
+|| *Value* || *Description * ||
+|| 0 || on success.  ||
+
+
+--------------------------------------------------------------------------------
+== Coding ==
+Encoding and decoding of [struct_m_i_d_i_event MIDIEvent] objects. 
+
+--------------------------------------------------------------------------------
+
+=== `int MIDIEventEncode` ===
+Encode events. 
+{{{
+int MIDIEventEncode(struct MIDIEvent *event, size_t size, void *buffer, size_t *written);
+}}}
+
+Encode an event to a buffer.
+
+
+==== Parameters ====
+|| *Name* || *Description * ||
+|| event || The event.  ||
+|| size || The size of the memory pointed to by `buffer`.  ||
+|| buffer || The buffer to encode the event into.  ||
+|| written || The number of bytes that have been written.  ||
+
+==== Return Values ====
+|| *Value* || *Description * ||
+|| 0 || on success.  ||
+|| 1 || if the event could not be encoded.  ||
+
+
+--------------------------------------------------------------------------------
+
+=== `int MIDIEventDecode` ===
+Decode events. 
+{{{
+int MIDIEventDecode(struct MIDIEvent *event, size_t size, void *buffer, size_t *read);
+}}}
+
+Decode event objects from a buffer.
+
+
+==== Parameters ====
+|| *Name* || *Description * ||
+|| event || The event.  ||
+|| size || The size of the memory pointed to by `buffer`.  ||
+|| buffer || The buffer to decode the event from.  ||
+|| read || The number of bytes that were actually read.  ||
+
+==== Return Values ====
+|| *Value* || *Description * ||
+|| 0 || on success.  ||
+|| 1 || if the event could not be encoded.  ||

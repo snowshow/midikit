@@ -14,4 +14,18 @@ struct MIDIDriverOSC;
 
 --------------------------------------------------------------------------------
 == Public Attributes == 
-`struct [struct_m_i_d_i_driver MIDIDriver]`struct MIDIDriver MIDIDriverOSC::supersuper`size_t`size_t MIDIDriverOSC::refsrefs`int`int MIDIDriverOSC::socketsocket`struct [struct_m_i_d_i_message_queue MIDIMessageQueue] *`struct MIDIMessageQueue* MIDIDriverOSC::in_queuein_queue`struct [struct_m_i_d_i_message_queue MIDIMessageQueue] *`struct MIDIMessageQueue* MIDIDriverOSC::out_queueout_queue
+
+
+=== `struct MIDIDriver MIDIDriverOSC::super` ===
+
+
+=== `size_t MIDIDriverOSC::refs` ===
+
+
+=== `int MIDIDriverOSC::socket` ===
+
+
+=== `struct MIDIMessageQueue* MIDIDriverOSC::in_queue` ===
+
+
+=== `struct MIDIMessageQueue* MIDIDriverOSC::out_queue` ===
