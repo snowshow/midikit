@@ -138,7 +138,7 @@ Decode multiple message objects from a buffer and use running status coding.
 
 
 --------------------------------------------------------------------------------
-== public-func ==
+== Public Functions == 
 
 
 --------------------------------------------------------------------------------

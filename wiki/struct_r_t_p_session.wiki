@@ -111,7 +111,7 @@ Decrement the reference counter of a session. If the reference count reached zer
 
 
 --------------------------------------------------------------------------------
-== public-func ==
+== Public Functions == 
 
 
 --------------------------------------------------------------------------------

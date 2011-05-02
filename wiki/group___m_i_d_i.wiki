@@ -1,15 +1,17 @@
 #sidebar contents
-#summary (Status has 4 bits & is followed by a 4 bit channel number.) 
+#summary MIDI. 
 #labels Documentation, Group
 
 = MIDI =
-(Status has 4 bits & is followed by a 4 bit channel number.) Whenever the type is MIDIBoolean you can expect them to work like "real" booleans.
+MIDI. Whenever the type is MIDIBoolean you can expect them to work like "real" booleans.
 
 Whenever a MIDIChannel is expected any of the MIDI channels 1-16 can be specified.
 
 (Status has eight bits, message has no data bytes.)
 
 (Status has eight bits.)
+
+(Status has 4 bits & is followed by a 4 bit channel number.)
 
 In some cases special constants for a device's base channel or all channels (1-16) can be used.
 
@@ -186,6 +188,21 @@ Interpret a MIDIValue as MIDIBoolean.
 
 --------------------------------------------------------------------------------
 
+=== `MIDIPrecondFailed` ===
+
+{{{
+#define MIDIPrecondFailed MIDIErrorNumber = kind; \
+MIDILogLocation( ERROR, "%s\n", message ); \
+return retval;;
+}}}
+
+
+--------------------------------------------------------------------------------
+== Logging and error handling ==
+
+
+--------------------------------------------------------------------------------
+
 === `MIDILog` ===
 Send a message to the MIDI logger. 
 {{{
@@ -201,10 +218,15 @@ Send a message to the MIDI logger.
 --------------------------------------------------------------------------------
 
 === `MIDILogLocation` ===
-
+Send a message to the MIDI logger and log the source location. 
 {{{
 #define MIDILogLocation MIDILog( channels, "%s:%i: " fmt, __FILE__, __LINE__, __VA_ARGS__ );;
 }}}
+
+==== Parameters ====
+|| *Name* || *Description * ||
+|| channels || The log channels to use for logging.  ||
+|| ... || The log message format and variable arguments.  ||
 
 
 --------------------------------------------------------------------------------
@@ -213,7 +235,8 @@ Send a message to the MIDI logger.
 Indicate that an error occured. 
 {{{
 #define MIDIError do { MIDIErrorNumber = kind; \
-                                    MIDILogLocation( ERROR, "[" #kind "] %s\n", msg ); } while( 0 );
+     MIDILogLocation( ERROR, "[" #kind "] %s\n", msg ); \
+} while( 0 );
 }}}
 Normal code execution will continue, but the MIDI error number will be set and a message will be logged. 
 ==== Parameters ====
@@ -228,10 +251,10 @@ Normal code execution will continue, but the MIDI error number will be set and a
 Check for programming errors. 
 {{{
 #define MIDIAssert do { if( !(expr) ) { \
-    MIDIErrorNumber = EASSERT; \
-    MIDILogLocation( ERROR, "[EASSERT] Assertion failed (%s)\n", #expr ); \
-    exit( EASSERT ); \
-  } } while( 0 );
+  MIDIErrorNumber = EASSERT; \
+  MIDILogLocation( ERROR, "[EASSERT] Assertion failed (%s)\n", #expr ); \
+  exit( EASSERT ); \
+} } while( 0 );
 }}}
 Use this macro to check for programming errors. Inside a function you may assume various conditions that should be fulfilled if you programmed your code correctly. For example if you have numerous static functions in you C code and use them to solve recurring tasks, these functions are only called by you, never by a client. To check if you use those functions correctly you can use assertions inside those functions. Assertions check for errors that should never happen. Failed assertions indicate a programming error and therefore result in the program exiting immediately. Use many assertions, cover all implicit knowledge with them, there is no penalty, because they will be removed in release mode. 
 ==== Parameters ====
@@ -241,23 +264,12 @@ Use this macro to check for programming errors. Inside a function you may assume
 
 --------------------------------------------------------------------------------
 
-=== `MIDIPrecondFailed` ===
-
-{{{
-#define MIDIPrecondFailed MIDIErrorNumber = kind; \
-  MIDILogLocation( ERROR, "%s\n", message ); \
-  return retval;;
-}}}
-
-
---------------------------------------------------------------------------------
-
 === `MIDIPrecondReturn` ===
 Check preconditions of a method and return a specified value. 
 {{{
 #define MIDIPrecondReturn do { if( !(expr) ) { \
-    MIDIPrecondFailed( "[" #kind "] Precondition failed (" #expr ")", kind, retval ); \
-  } } while( 0 );
+  MIDIPrecondFailed( "[" #kind "] Precondition failed (" #expr ")", kind, retval ); \
+} } while( 0 );
 }}}
 Use this macro to check your preconditions inside a function. Unlike MIDIPrecond this macro allows you to specify the return value if the precondition was violated. 
 ==== Parameters ====
@@ -273,8 +285,8 @@ Use this macro to check your preconditions inside a function. Unlike MIDIPrecond
 Check preconditions of a method. 
 {{{
 #define MIDIPrecond do { if( !(expr) ) { \
-    MIDIPrecondFailed( "[" #kind "] Precondition failed (" #expr ")", kind, kind ); \
-  } } while( 0 );
+  MIDIPrecondFailed( "[" #kind "] Precondition failed (" #expr ")", kind, kind ); \
+} } while( 0 );
 }}}
 Use this macro to check your preconditions inside a function. Those preconditions may be specific values of arguments, or checks if a malloc succeeded. Preconditions may also be used to check if some piece of code should continue it's operation. A failed precondition is a program error that was triggered by misuse of the API or by the an external error. When the precondition fails the function returns immediately. 
 ==== Parameters ====
