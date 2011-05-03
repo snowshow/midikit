@@ -40,7 +40,7 @@ struct AppleMIDICommand;
 === `char AppleMIDICommand::name[64]` ===
 
 
-=== `struct AppleMIDICommand::@1::@2  AppleMIDICommand::session` ===
+=== `struct AppleMIDICommand::@0::@1  AppleMIDICommand::session` ===
 
 
 === `unsigned long AppleMIDICommand::count` ===
@@ -55,13 +55,13 @@ struct AppleMIDICommand;
 === `unsigned long long AppleMIDICommand::timestamp3` ===
 
 
-=== `struct AppleMIDICommand::@1::@3  AppleMIDICommand::sync` ===
+=== `struct AppleMIDICommand::@0::@2  AppleMIDICommand::sync` ===
 
 
 === `unsigned long AppleMIDICommand::seqnum` ===
 
 
-=== `struct AppleMIDICommand::@1::@4  AppleMIDICommand::feedback` ===
+=== `struct AppleMIDICommand::@0::@3  AppleMIDICommand::feedback` ===
 
 
-=== `union AppleMIDICommand::@1  AppleMIDICommand::data` ===
+=== `union AppleMIDICommand::@0  AppleMIDICommand::data` ===

@@ -13,19 +13,6 @@ I realize that this a general purpose linked list and should not be restricted t
 
 
 --------------------------------------------------------------------------------
-== Public Attributes == 
-
-
-=== `int MIDIList::refs` ===
-
-
-=== `struct MIDITypeSpec* MIDIList::type` ===
-
-
-=== `struct MIDIListEntry* MIDIList::data` ===
-
-
---------------------------------------------------------------------------------
 == Creation and destruction ==
 Creating, destroying and reference counting of MIDIConnector objects. 
 
@@ -212,37 +199,3 @@ Call the given function once for every item in the list. Use the given `info` po
 || *Value* || *Description * ||
 || 0 || on success.  ||
 || >0 || otherwise.  ||
-
-
---------------------------------------------------------------------------------
-== Private Functions == 
-
-
---------------------------------------------------------------------------------
-
-=== `static void _list_item_retain` ===
-Use the callback to retain a list item. 
-{{{
-static void _list_item_retain(struct MIDIList *list, void *item);
-}}}
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| list || The list.  ||
-|| item || The item to retain.  ||
-
-
---------------------------------------------------------------------------------
-
-=== `static void _list_item_release` ===
-Use the callback to release a list item. 
-{{{
-static void _list_item_release(struct MIDIList *list, void *item);
-}}}
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| list || The list.  ||
-|| item || The item to release.  ||

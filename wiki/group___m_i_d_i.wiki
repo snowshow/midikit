@@ -178,26 +178,6 @@ Interpret a MIDIValue as MIDIBoolean.
 
 
 --------------------------------------------------------------------------------
-
-=== `MIDI_LOG_CH` ===
-
-{{{
-#define MIDI_LOG_CH ( (MIDI_LOG_ ## channels) & MIDI_LOG_CHANNELS );
-}}}
-
-
---------------------------------------------------------------------------------
-
-=== `MIDIPrecondFailed` ===
-
-{{{
-#define MIDIPrecondFailed MIDIErrorNumber = kind; \
-MIDILogLocation( ERROR, "%s\n", message ); \
-return retval;;
-}}}
-
-
---------------------------------------------------------------------------------
 == Logging and error handling ==
 
 
@@ -206,7 +186,7 @@ return retval;;
 === `MIDILog` ===
 Send a message to the MIDI logger. 
 {{{
-#define MIDILog do { if( MIDI_LOG_ ## channels & MIDI_LOG_CHANNELS ) { (*MIDILogger)( __VA_ARGS__ ); } } while( 0 );
+#define MIDILog do { if( MIDILogger != NULL ) { (*MIDILogger)( MIDI_LOG_ ## channel, __VA_ARGS__ ); } } while( 0 );
 }}}
 
 ==== Parameters ====
@@ -214,13 +194,15 @@ Send a message to the MIDI logger.
 || channels || The log channels to use for logging.  ||
 || ... || The log message format and variable arguments.  ||
 
+==== Return ====
+This macro can not be used as an lvalue. 
 
 --------------------------------------------------------------------------------
 
 === `MIDILogLocation` ===
 Send a message to the MIDI logger and log the source location. 
 {{{
-#define MIDILogLocation MIDILog( channels, "%s:%i: " fmt, __FILE__, __LINE__, __VA_ARGS__ );;
+#define MIDILogLocation MIDILog( channel, "%s:%i: " fmt, __FILE__, __LINE__, __VA_ARGS__ );;
 }}}
 
 ==== Parameters ====
@@ -228,6 +210,8 @@ Send a message to the MIDI logger and log the source location.
 || channels || The log channels to use for logging.  ||
 || ... || The log message format and variable arguments.  ||
 
+==== Return ====
+This macro can not be used as an lvalue. 
 
 --------------------------------------------------------------------------------
 
@@ -244,6 +228,8 @@ Normal code execution will continue, but the MIDI error number will be set and a
 || kind || The symbolic error number.  ||
 || msg || The log message.  ||
 
+==== Return ====
+This macro does not return. 
 
 --------------------------------------------------------------------------------
 
@@ -261,6 +247,27 @@ Use this macro to check for programming errors. Inside a function you may assume
 || *Name* || *Description * ||
 || expr || The expression to test.  ||
 
+==== Return ====
+This macro only returns only if the assertion is fulfilled. It can not be used as an lvalue. 
+
+--------------------------------------------------------------------------------
+
+=== `MIDIPrecondFailed` ===
+Indicate a failed precondition and return an error. 
+{{{
+#define MIDIPrecondFailed MIDIErrorNumber = kind; \
+MIDILogLocation( ERROR, "%s\n", message ); \
+return retval;;
+}}}
+This should usually not be used directly. Instead either MIDIPrecond or MIDIPrecondReturn can be used. 
+==== Parameters ====
+|| *Name* || *Description * ||
+|| message || The error message.  ||
+|| kind || The error number.  ||
+|| retval || The return value.  ||
+
+==== Return ====
+This macro does not return. 
 
 --------------------------------------------------------------------------------
 
@@ -278,6 +285,8 @@ Use this macro to check your preconditions inside a function. Unlike MIDIPrecond
 || kind || The symbolic error number.  ||
 || retval || The value that should be returned on error.  ||
 
+==== Return ====
+This macro only returns only if the precondition is fulfilled. It can not be used as an lvalue. 
 
 --------------------------------------------------------------------------------
 
@@ -294,6 +303,8 @@ Use this macro to check your preconditions inside a function. Those precondition
 || expr || The expression to test.  ||
 || kind || The symbolic error number.  ||
 
+==== Return ====
+This macro only returns only if the precondition is fulfilled. It can not be used as an lvalue. 
 
 --------------------------------------------------------------------------------
 == Channel Voice Messages. ==

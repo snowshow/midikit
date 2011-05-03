@@ -9,32 +9,65 @@ Provider for accurate timestamps.
 
 struct MIDIClock;
 }}}
-The [struct_m_i_d_i_clock MIDIClock] provides accurate timestamps at any desired rate with a selectable offset. 
+The [struct_m_i_d_i_clock MIDIClock] provides accurate timestamps at any desired rate with a selectable offset. It focuses on stable timestamps and tries to avoid integer overflows in calculations. 
 <wiki:toc max_depth="3"/>
 
 
 --------------------------------------------------------------------------------
-== Public Attributes == 
+== Global clock ==
 
 
-=== `int MIDIClock::refs` ===
+--------------------------------------------------------------------------------
+
+=== `int MIDIClockSetGlobalClock` ===
+Set the global clock. 
+{{{
+int MIDIClockSetGlobalClock(struct MIDIClock *clock);
+}}}
+
+Replace the global clock (if set) with another clock.
 
 
-=== `MIDITimestamp MIDIClock::offset` ===
+==== Parameters ====
+|| *Name* || *Description * ||
+|| clock || The global clock.  ||
 
 
-=== `MIDISamplingRate MIDIClock::rate` ===
+--------------------------------------------------------------------------------
+
+=== `int MIDIClockGetGlobalClock` ===
+Get the global clock. 
+{{{
+int MIDIClockGetGlobalClock(struct MIDIClock **clock);
+}}}
 
 
-=== `unsigned long long MIDIClock::numer` ===
-
-
-=== `unsigned long long MIDIClock::denom` ===
+==== Parameters ====
+|| *Name* || *Description * ||
+|| clock || The global clock.  ||
 
 
 --------------------------------------------------------------------------------
 == Creation and destruction ==
 Creating, destroying and reference counting of [struct_m_i_d_i_clock MIDIClock] objects. 
+
+--------------------------------------------------------------------------------
+
+=== `struct MIDIClock * MIDIClockProvide` ===
+Provide clock with a specific timestamp rate. 
+{{{
+struct MIDIClock * MIDIClockProvide(MIDISamplingRate rate);
+}}}
+
+Check if the global clock has the requested sampling rate. If the rate matches, retain and return the global clock. Create a new clock otherwise. If the global clock still NULL, assign the newly created clock.
+
+
+==== Parameters ====
+|| *Name* || *Description * ||
+|| rate || The number of times the clock should tick per second.  ||
+
+==== Return ====
+a pointer to the created clock structure on success. a `NULL` pointer if the clock could not created. 
 
 --------------------------------------------------------------------------------
 
@@ -253,37 +286,3 @@ Convert a timestamp that was created by a given clock to the timestamp of anothe
 ==== Return Values ====
 || *Value* || *Description * ||
 || 0 || on success.  ||
-
-
---------------------------------------------------------------------------------
-== Related == 
-
-
---------------------------------------------------------------------------------
-
-=== `int MIDIClockSetGlobalClock` ===
-Set the global clock. 
-{{{
-int MIDIClockSetGlobalClock(struct MIDIClock *clock);
-}}}
-
-Replace the global clock (if set) with another clock.
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| clock || The global clock.  ||
-
-
---------------------------------------------------------------------------------
-
-=== `int MIDIClockGetGlobalClock` ===
-Get the global clock. 
-{{{
-int MIDIClockGetGlobalClock(struct MIDIClock **clock);
-}}}
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| clock || The global clock.  ||

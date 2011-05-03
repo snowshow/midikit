@@ -14,37 +14,6 @@ The [struct_m_i_d_i_device MIDIDevice] class provides a skeleton for customized 
 
 
 --------------------------------------------------------------------------------
-== Public Attributes == 
-
-
-=== `int MIDIDevice::refs` ===
-
-
-=== `struct MIDIDeviceDelegate* MIDIDevice::delegate` ===
-
-
-=== `struct MIDIPort* MIDIDevice::in` ===
-
-
-=== `struct MIDIPort* MIDIDevice::out` ===
-
-
-=== `MIDIChannel MIDIDevice::base_channel` ===
-
-
-=== `MIDIBoolean MIDIDevice::omni_mode` ===
-
-
-=== `MIDIBoolean MIDIDevice::poly_mode` ===
-
-
-=== `struct MIDITimer* MIDIDevice::timer` ===
-
-
-=== `struct MIDIController* MIDIDevice::controller[N_CHANNEL]` ===
-
-
---------------------------------------------------------------------------------
 == Creation and destruction ==
 Creating, destroying and reference counting of [struct_m_i_d_i_device MIDIDevice] objects. 
 
@@ -174,6 +143,70 @@ int MIDIDeviceGetThroughPort(struct MIDIDevice *device, struct MIDIPort **port);
 || *Value* || *Description * ||
 || 0 || on success.  ||
 
+
+--------------------------------------------------------------------------------
+== Deprecated connector attachment functions ==
+
+
+--------------------------------------------------------------------------------
+
+=== `int MIDIDeviceDetachIn` ===
+
+{{{
+int MIDIDeviceDetachIn(struct MIDIDevice *device);
+}}}
+
+DeprecatedUse ports instead.
+
+--------------------------------------------------------------------------------
+
+=== `int MIDIDeviceAttachIn` ===
+
+{{{
+int MIDIDeviceAttachIn(struct MIDIDevice *device, struct MIDIPort *port);
+}}}
+
+DeprecatedUse ports instead.
+
+--------------------------------------------------------------------------------
+
+=== `int MIDIDeviceDetachOut` ===
+
+{{{
+int MIDIDeviceDetachOut(struct MIDIDevice *device);
+}}}
+
+DeprecatedUse ports instead.
+
+--------------------------------------------------------------------------------
+
+=== `int MIDIDeviceAttachOut` ===
+
+{{{
+int MIDIDeviceAttachOut(struct MIDIDevice *device, struct MIDIPort *port);
+}}}
+
+DeprecatedUse ports instead.
+
+--------------------------------------------------------------------------------
+
+=== `int MIDIDeviceDetachThru` ===
+
+{{{
+int MIDIDeviceDetachThru(struct MIDIDevice *device);
+}}}
+
+DeprecatedUse ports instead.
+
+--------------------------------------------------------------------------------
+
+=== `int MIDIDeviceAttachThru` ===
+
+{{{
+int MIDIDeviceAttachThru(struct MIDIDevice *device, struct MIDIPort *port);
+}}}
+
+DeprecatedUse ports instead.
 
 --------------------------------------------------------------------------------
 == Property access ==
@@ -993,31 +1026,3 @@ This is called when the device wants to send a "Real-Time" message. It can be us
 || *Value* || *Description * ||
 || 0 || on success.  ||
 || 1 || if the message could not be sent.  ||
-
-
---------------------------------------------------------------------------------
-== Private Functions == 
-
-
---------------------------------------------------------------------------------
-
-=== `static int _recv_msg` ===
-Receive a generic MIDI message. 
-{{{
-static int _recv_msg(struct MIDIDevice *device, struct MIDIMessage *message);
-}}}
-
-This is called by the `IN` port whenever it relays a [struct_m_i_d_i_message MIDIMessage] to the device. Such a message may come from a [struct_m_i_d_i_driver MIDIDriver] or the `THRU` port of another device.
-
-The device determines the message type and calls the appropiate member function. If something is attached to the device's `THRU` port, the message is relayed via the port before the device processes the message. This implies that, when multiple devices are daisy-chained with their `THRU` ports, the last device in the chain will be the first device to process the message.
-
-
-==== Parameters ====
-|| *Name* || *Description * ||
-|| device || The midi device.  ||
-|| message || The received message.  ||
-
-==== Return Values ====
-|| *Value* || *Description * ||
-|| 0 || on success.  ||
-|| 1 || if the message could not be processed.  ||

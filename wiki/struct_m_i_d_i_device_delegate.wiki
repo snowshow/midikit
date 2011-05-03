@@ -18,43 +18,43 @@ Every time the device receives a message, the device calls one of these callback
 
 
 === `MIDIDeviceDelegate::recv_nof` ===
-Note off callback. 
+Note off callback. [group___m_i_d_i_1ga508f50a35543d3e5ea6baf9750440707 MIDI_STATUS_NOTE_OFF]
 
 === `MIDIDeviceDelegate::recv_non` ===
-Note on callback. 
+Note on callback. [group___m_i_d_i_1gaa1b6ca289d856e41e2f1096d2b189d99 MIDI_STATUS_NOTE_ON]
 
 === `MIDIDeviceDelegate::recv_pkp` ===
-Polyphonic key pressure callback. 
+Polyphonic key pressure callback. [group___m_i_d_i_1ga6d3bf5d791b9f209240dcd372e7abd2a MIDI_STATUS_POLYPHONIC_KEY_PRESSURE]
 
 === `MIDIDeviceDelegate::recv_cc` ===
-Control change callback. 
+Control change callback. [group___m_i_d_i_1gaa48b3e691cfc5475ce8149aeade30db7 MIDI_STATUS_CONTROL_CHANGE]
 
 === `MIDIDeviceDelegate::recv_pc` ===
-Program change callback. 
+Program change callback. [group___m_i_d_i_1ga27f9e3880907e13a308f33c6cc7e3e0f MIDI_STATUS_PROGRAM_CHANGE]
 
 === `MIDIDeviceDelegate::recv_cp` ===
-Channel pressure callback. 
+Channel pressure callback. [group___m_i_d_i_1gac8461943b06eb61c710f6d4a8d3ac9cd MIDI_STATUS_CHANNEL_PRESSURE]
 
 === `MIDIDeviceDelegate::recv_pwc` ===
-Pitch wheel change callback. 
+Pitch wheel change callback. [group___m_i_d_i_1ga5ccf32074e5679bad67653efa8002888 MIDI_STATUS_PITCH_WHEEL_CHANGE]
 
 === `MIDIDeviceDelegate::recv_sx` ===
-System exclusive callback. 
+System exclusive callback. [group___m_i_d_i_1ga99239cc83091295b41695327d9735c14 MIDI_STATUS_SYSTEM_EXCLUSIVE]
 
 === `MIDIDeviceDelegate::recv_tcqf` ===
-Time code quarter frame callback. 
+Time code quarter frame callback. [group___m_i_d_i_1ga9968ce10ea1a19f32847896dde9ad58c MIDI_STATUS_TIME_CODE_QUARTER_FRAME]
 
 === `MIDIDeviceDelegate::recv_spp` ===
-Song position pointer callback. 
+Song position pointer callback. [group___m_i_d_i_1gaa965eb7d2e85dbcb48e62a5a833a191c MIDI_STATUS_SONG_POSITION_POINTER]
 
 === `MIDIDeviceDelegate::recv_ss` ===
-Song select callback. 
+Song select callback. [group___m_i_d_i_1ga61e127bbfbe17cca1135d999d74e6426 MIDI_STATUS_SONG_SELECT]
 
 === `MIDIDeviceDelegate::recv_tr` ===
-Tune request callback. 
+Tune request callback. [group___m_i_d_i_1gac84f77995b04995520760a4affa138be MIDI_STATUS_TUNE_REQUEST]
 
 === `MIDIDeviceDelegate::recv_eox` ===
-End of exclusive callback. 
+End of exclusive callback. [group___m_i_d_i_1ga5cb64db98a73ce224423852d5a02a45e MIDI_STATUS_END_OF_EXCLUSIVE]
 
 === `MIDIDeviceDelegate::recv_rt` ===
-Real time callback. 
+Real time callback. [group___m_i_d_i_1ga298ba5b7d2acab27e582ecd0b0759c4a MIDI_STATUS_TIMING_CLOCK], [group___m_i_d_i_1ga17fb07b1dba8fd613ad7cb8cb00f0b25 MIDI_STATUS_START], [group___m_i_d_i_1ga9052500b5acc03a3c415f51942a77995 MIDI_STATUS_CONTINUE], [group___m_i_d_i_1ga5c8b5cfef562c82fe7586cfe4ed296b6 MIDI_STATUS_STOP], [group___m_i_d_i_1gace7e8de824fd226dbf6deebaeecbffe6 MIDI_STATUS_ACTIVE_SENSING], [group___m_i_d_i_1ga2e8a64d0ea2664756c1b8f9cb4f8f480 MIDI_STATUS_RESET]
