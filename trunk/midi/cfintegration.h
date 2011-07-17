@@ -17,14 +17,17 @@ int MIDIDriverAppleMIDIRemovePeerWithCFNetService( struct MIDIDriverAppleMIDI * 
                                                    CFNetServiceRef netService );
 
 #include "midi/runloop.h"
-struct CFMIDIRunLoopSource;
 
-struct CFMIDIRunLoopSource * CFMIDIRunLoopSourceCreate( struct MIDIRunloopSource * source );
-void CFMIDIRunLoopSourceDestroy( struct CFMIDIRunLoopSource * source );
-void CFMIDIRunLoopSourceRetain( struct CFMIDIRunLoopSource * source );
-void CFMIDIRunLoopSourceRelease( struct CFMIDIRunLoopSource * source );
+#ifndef MIDI_RUNLOOP_INTERNALS
+/**
+ * When used as an opaque pointer type, an instance of
+ * CFMIDIRunloop can be used as a MIDIRunloop.
+ */
+#define CFMIDIRunloop MIDIRunloop
+#endif
 
-void CFRunLoopAddMIDIRunLoopSource( CFRunLoopRef rl, struct CFMIDIRunLoopSource * source, CFStringRef mode );
-void CFRunLoopRemoveMIDIRunLoopSource( CFRunLoopRef rl, struct CFMIDIRunLoopSource * source, CFStringRef mode );
+struct CFMIDIRunloop;
+
+struct CFMIDIRunloop * CFMIDIRunloopCreate( CFRunLoopRef runloop );
 
 #endif

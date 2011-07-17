@@ -269,4 +269,16 @@ int MIDIDriverTriggerEvent( struct MIDIDriver * driver, struct MIDIEvent * event
   return MIDIPortSend( driver->port, MIDIEventType, event );
 }
 
+int MIDIRunloopAddDriver( struct MIDIRunloop * runloop, struct MIDIDriver * driver ) {
+  MIDIPrecond( runloop != NULL, EFAULT );
+  MIDIPrecond( driver != NULL, EINVAL );
+  return MIDIRunloopAddSource( runloop, driver->rls );
+}
+
+int MIDIRunloopRemoveDriver( struct MIDIRunloop * runloop, struct MIDIDriver * driver ) {
+  MIDIPrecond( runloop != NULL, EFAULT );
+  MIDIPrecond( driver != NULL, EINVAL );
+  return MIDIRunloopRemoveSource( runloop, driver->rls );
+}
+
 /** @} */
