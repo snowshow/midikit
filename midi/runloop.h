@@ -27,6 +27,36 @@ struct MIDIRunloopDelegate {
   int (*clear_timeout)( void * info );
 };
 
+#ifdef MIDI_RUNLOOP_INTERNALS
+#define MAX_RUNLOOP_SOURCES 16
+
+struct MIDIRunloopSource {
+  int    refs;
+  int    nfds;
+  fd_set readfds;
+  fd_set writefds;
+  struct timespec timeout_start;
+  struct timespec timeout_time;
+  struct MIDIRunloopSourceDelegate delegate;
+  struct MIDIRunloop * runloop;
+};
+
+struct MIDIRunloop {
+  int    refs;
+  int    active;
+  struct MIDIRunloopDelegate delegate;
+  struct MIDIRunloopSource   master;
+  struct MIDIRunloopSource * sources[MAX_RUNLOOP_SOURCES];
+  int (*schedule_read)( void * runloop, int fd );
+  int (*schedule_write)( void * runloop, int fd );
+  int (*schedule_timeout)( void * runloop, struct timespec * );
+  int (*clear_read)( void * runloop, int fd );
+  int (*clear_write)( void * runloop, int fd );
+  int (*clear_timeout)( void * runloop );
+  void (*destroy)( void * runloop );
+};
+#endif
+
 struct MIDIRunloopSource * MIDIRunloopSourceCreate( struct MIDIRunloopSourceDelegate * delegate );
 void MIDIRunloopSourceDestroy( struct MIDIRunloopSource * source );
 void MIDIRunloopSourceRetain( struct MIDIRunloopSource * source );
@@ -42,7 +72,11 @@ int MIDIRunloopSourceClearWrite( struct MIDIRunloopSource * source, int fd );
 int MIDIRunloopSourceScheduleTimeout( struct MIDIRunloopSource * source, struct timespec * timeout );
 int MIDIRunloopSourceClearTimeout( struct MIDIRunloopSource * source );
 
-struct MIDIRunloop * MIDIRunloopCreate( struct MIDIRunloopDelegate * delegate );
+int MIDIRunloopSetGlobalRunloop( struct MIDIRunloop * runloop );
+int MIDIRunloopGetGlobalRunloop( struct MIDIRunloop ** runloop );
+
+struct MIDIRunloop * MIDIRunloopCreate();
+void MIDIRunloopInit( struct MIDIRunloop * runloop );
 void MIDIRunloopDestroy( struct MIDIRunloop * runloop );
 void MIDIRunloopRetain( struct MIDIRunloop * runloop );
 void MIDIRunloopRelease( struct MIDIRunloop * runloop );
@@ -53,5 +87,6 @@ int MIDIRunloopRemoveSource( struct MIDIRunloop * runloop, struct MIDIRunloopSou
 int MIDIRunloopStart( struct MIDIRunloop * runloop );
 int MIDIRunloopStop( struct MIDIRunloop * runloop );
 int MIDIRunloopStep( struct MIDIRunloop * runloop );
+
 
 #endif

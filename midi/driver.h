@@ -5,6 +5,7 @@
 struct MIDIPort;
 struct MIDIEvent;
 struct MIDIMessage;
+struct MIDIRunloop;
 
 struct MIDIDriver;
 
@@ -43,5 +44,8 @@ int MIDIDriverTriggerEvent( struct MIDIDriver * driver, struct MIDIEvent * event
 int MIDIDriverStartProfiling( struct MIDIDriver * driver );
 int MIDIDriverGetProfilingStats( struct MIDIDriver * driver, void * stats );
 int MIDIDriverStopProfiling( struct MIDIDriver * driver );
+
+int MIDIRunloopAddDriver( struct MIDIRunloop * runloop, struct MIDIDriver * driver );
+int MIDIRunloopRemoveDriver( struct MIDIRunloop * runloop, struct MIDIDriver * driver );
 
 #endif
