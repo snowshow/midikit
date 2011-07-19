@@ -6,6 +6,7 @@ include $(PROJECTDIR)/config.mk
 
 CFLAGS := $(CFLAGS)
 LDFLAGS_SHARED := $(LDFLAGS) -lmidikit -lmidikit-driver
+LDFLAGS_DYNAMIC := $(LDFLAGS) -lmidikit -lmidikit-driver
 LDFLAGS_STATIC := $(LDFLAGS) $(LIBDIR)/libmidikit$(LIB_SUFFIX_STATIC) $(LIBDIR)/libmidikit-driver$(LIB_SUFFIX_STATIC)
 LDFLAGS := $(LDFLAGS_$(COMPILE_MODE))
 
@@ -14,7 +15,8 @@ OBJS=$(OBJDIR)/midi.o $(OBJDIR)/util.o $(OBJDIR)/list.o $(OBJDIR)/port.o \
      $(OBJDIR)/device.o $(OBJDIR)/driver.o $(OBJDIR)/message_queue.o \
      $(OBJDIR)/integration.o $(OBJDIR)/runloop.o \
      $(OBJDIR)/driver_rtp.o $(OBJDIR)/driver_applemidi.o
-BIN=test_main
+BIN_NAME=test_main
+BIN=$(BINDIR)/$(BIN_NAME)$(BIN_SUFFIX)
 
 MAIN_C=main.c
 
@@ -31,11 +33,11 @@ $(OBJDIR)/%.o:
 	@$(MKDIR_P) $(OBJDIR)
 	$(CC) $(CFLAGS_OBJ) -o $@ $<
 
-$(BINDIR)/$(BIN): $(MAIN_C) $(OBJS)
-	$(CC) $^ $(LDFLAGS_BIN) $(CFLAGS) -o $@
+$(BIN): $(MAIN_C) $(OBJS)
+	$(LINK_BIN)
 
 $(BINDIR)/demo: demo.c
-	$(CC) $(LDFLAGS_BIN) -o $@ $^
+	$(LINK_BIN)
 
 $(OBJDIR)/midi.o: midi.c test.h
 $(OBJDIR)/util.o: util.c test.h
@@ -53,8 +55,8 @@ $(OBJDIR)/runloop.o: runloop.c test.h
 $(OBJDIR)/driver_rtp.o: driver_rtp.c test.h
 $(OBJDIR)/driver_applemidi.o: driver_applemidi.c test.h
 
-tests.passed: $(BINDIR)/$(BIN) $(LIBDIR)/libmidikit$(LIB_SUFFIX) $(LIBDIR)/libmidikit-driver$(LIB_SUFFIX)
-	LD_LIBRARY_PATH=$(LIBDIR) $(BINDIR)/$(BIN) && touch $@
+tests.passed: $(BIN) $(LIBDIR)/libmidikit$(LIB_SUFFIX) $(LIBDIR)/libmidikit-driver$(LIB_SUFFIX)
+	LD_LIBRARY_PATH=$(LIBDIR) $(BIN) && touch $@
 
 $(MAIN_C): midi.c util.c list.c port.c clock.c message_format.c message.c device.c driver.c integration.c runloop.c driver_rtp.c driver_applemidi.c
-	./generate_main.sh -o $(MAIN_C) $^
+	./generate_main.sh -o $@ $^

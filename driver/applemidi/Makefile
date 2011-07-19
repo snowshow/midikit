@@ -16,6 +16,6 @@ clean:
 
 $(OBJDIR)/%.o:
 	@$(MKDIR_P) $(OBJDIR)
-	$(CC) $(CFLAGS_OBJ) -o $@ $<
+	$(COMPILE_OBJ)
 
 $(OBJDIR)/applemidi.o: applemidi.c applemidi.h

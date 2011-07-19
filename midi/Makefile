@@ -24,11 +24,9 @@ $(OBJDIR)/%.o:
 	@$(MKDIR_P) $(OBJDIR)
 	$(CC) $(CFLAGS_OBJ) -o $@ $<
 
-$(LIBDIR)/$(LIB_NAME)$(LIB_SUFFIX_SHARED): $(OBJS)
-	$(CC) $(LDFLAGS_LIB) -o $@ $^
-
-$(LIBDIR)/$(LIB_NAME)$(LIB_SUFFIX_STATIC): $(OBJS)
-	$(AR) rs $@ $^
+$(LIB): $(OBJS)
+	@$(MKDIR_P) $(LIBDIR)
+	$(LINK_LIB)
 
 $(OBJDIR)/cfintegration.o: cfintegration.c
 $(OBJDIR)/clock.o: clock.c clock.h midi.h
