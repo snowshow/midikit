@@ -221,7 +221,7 @@ static int _rtpmidi_journal_decode( struct RTPMIDISession * session, struct RTPM
  */
 static int _rtpmidi_journal_encode_messages( struct RTPMIDIJournal * journal, unsigned short checkpoint,
                                              struct MIDIMessageList * messages ) {
-  struct MIDIMessage * message;
+/*struct MIDIMessage * message;*/
   return 0;
 }
 
@@ -234,7 +234,7 @@ static int _rtpmidi_journal_encode_messages( struct RTPMIDIJournal * journal, un
  */
 static int _rtpmidi_journal_decode_messages( struct RTPMIDIJournal * journal, unsigned short checkpoint,
                                              struct MIDIMessageList * messages ) {
-  struct MIDIMessage * message;
+/*struct MIDIMessage * message;*/
   return 0;
 }
 
@@ -572,7 +572,7 @@ int RTPMIDISessionReceive( struct RTPMIDISession * session, struct MIDIMessageLi
   void * buffer;
   MIDITimestamp timestamp;
 
-  struct RTPPeer        * peer    = NULL;
+/*struct RTPPeer        * peer    = NULL;*/
   struct RTPMIDIJournal * journal = NULL;
   struct RTPMIDIInfo    * minfo   = &(session->midi_info);
   struct RTPPacketInfo  * info    = &(session->rtp_info);

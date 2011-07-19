@@ -4,11 +4,10 @@ SUBDIR=test
 
 include $(PROJECTDIR)/config.mk
 
-CFLAGS := $(CFLAGS)
 LDFLAGS_SHARED := $(LDFLAGS) -lmidikit -lmidikit-driver
 LDFLAGS_DYNAMIC := $(LDFLAGS) -lmidikit -lmidikit-driver
 LDFLAGS_STATIC := $(LDFLAGS) $(LIBDIR)/libmidikit$(LIB_SUFFIX_STATIC) $(LIBDIR)/libmidikit-driver$(LIB_SUFFIX_STATIC)
-LDFLAGS := $(LDFLAGS_$(COMPILE_MODE))
+LDFLAGS := $(LDFLAGS_$(LINK_MODE))
 
 OBJS=$(OBJDIR)/midi.o $(OBJDIR)/util.o $(OBJDIR)/list.o $(OBJDIR)/port.o \
      $(OBJDIR)/clock.o $(OBJDIR)/message_format.o $(OBJDIR)/message.o \

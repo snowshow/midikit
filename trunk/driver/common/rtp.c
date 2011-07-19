@@ -398,6 +398,7 @@ static void _init_addr_with_socket( struct RTPAddress * address, int socket ) {
   getsockname( socket, (struct sockaddr *) &(address->addr), &(address->size) );
 }
 
+/*
 static void _init_addr_empty( struct RTPAddress * address ) {
   address->ssrc = 0;
   address->size = 0;
@@ -409,6 +410,7 @@ static void _init_addr( struct RTPAddress * address, socklen_t size, struct sock
   address->size = size;
   memcpy( &(address->addr), addr, size );
 }
+*/
 
 static void _session_randomize_ssrc( struct RTPSession * session ) {
   static struct timeval tv = { 0, 0 };
