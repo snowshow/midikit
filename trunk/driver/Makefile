@@ -31,11 +31,9 @@ $(OBJS_COMMON): common/.make
 $(OBJS_APPLEMIDI): applemidi/.make
 $(OBJS_OSC): osc/.make
 
-$(LIBDIR)/$(LIB_NAME)$(LIB_SUFFIX_SHARED): $(OBJS_COMMON) $(OBJS_APPLEMIDI) $(OBJS_OSC)
-	$(CC) $(LDFLAGS_LIB) -o $@ $^
-
-$(LIBDIR)/$(LIB_NAME)$(LIB_SUFFIX_STATIC): $(OBJS_COMMON) $(OBJS_APPLEMIDI) $(OBJS_OSC)
-	$(AR) rs $@ $^
+$(LIB): $(OBJS_COMMON) $(OBJS_APPLEMIDI) $(OBJS_OSC)
+	@$(MKDIR_P) $(LIBDIR)
+	$(LINK_LIB)
 
 %/.make:
 	cd $$(dirname $@) && $(MAKE)

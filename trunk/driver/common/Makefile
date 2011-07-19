@@ -16,7 +16,7 @@ clean:
 
 $(OBJDIR)/%.o:
 	@$(MKDIR_P) $(OBJDIR)
-	$(CC) $(CFLAGS_OBJ) -o $@ $<
+	$(COMPILE_OBJ)
 
 $(OBJDIR)/rtp.o: rtp.c rtp.h
 $(OBJDIR)/rtpmidi.o: rtpmidi.c rtpmidi.h rtp.h
