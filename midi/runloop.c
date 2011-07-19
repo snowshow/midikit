@@ -318,6 +318,23 @@ static int _runloop_source_write( struct MIDIRunloopSource * source, struct time
 }
 
 /**
+ * @brief Re-schedule all timeouts and sockets.
+ * @private @memberof MIDIRunloopSource
+ * @param source The runloop source.
+ */
+static int _runloop_source_reschedule( struct MIDIRunloopSource * source ) {
+  int fd;
+  if( source->runloop != NULL ) {
+    _runloop_schedule_timeout( source->runloop, &(source->timeout_time) );
+    for( fd = 0; fd<source->nfds; fd++ ) {
+      if( FD_ISSET( fd, &(source->readfds) ) )  _runloop_schedule_read( source->runloop, fd );
+      if( FD_ISSET( fd, &(source->writefds) ) ) _runloop_schedule_write( source->runloop, fd );
+    }
+  }
+  return 0;
+}
+
+/**
  * @brief Wait until any callback of the runloop source is triggered.
  * If no callbacks are scheduled return immediately.
  * @public @memberof MIDIRunloopSource
@@ -664,6 +681,7 @@ void MIDIRunloopInit( struct MIDIRunloop * runloop ) {
   runloop->master.delegate.write   = NULL;
   runloop->master.delegate.timeout = NULL;
   runloop->master.delegate.info    = runloop;
+  runloop->master.runloop = runloop;
 
   for( i=0; i<MAX_RUNLOOP_SOURCES; i++ ) {
     runloop->sources[i] = NULL;
@@ -855,6 +873,7 @@ int MIDIRunloopAddSource( struct MIDIRunloop * runloop, struct MIDIRunloopSource
     return 1;
   }
   _runloop_update_from_source( runloop, source );
+  _runloop_source_reschedule( &(runloop->master) );
   MIDILog( DEVELOP, "master timeout %lu sec + %lu nsec\nnfds: %i\n",
     runloop->master.timeout_time.tv_sec, runloop->master.timeout_time.tv_nsec, runloop->master.nfds );
   return 0;

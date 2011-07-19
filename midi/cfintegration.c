@@ -49,9 +49,6 @@ struct CFMIDIRunloop {
   CFMutableSetRef cf_timers;
   CFMutableSetRef cf_sockets;
   CFMutableSetRef cf_sources;
-  size_t nsrc;
-  CFRunLoopTimerRef  cfrlt;
-  CFRunLoopSourceRef cfrls[1];
 };
 
 /* MARK: Core Foundation callbacks *//**
@@ -200,6 +197,7 @@ static CFRunLoopTimerRef _cf_runloop_provide_cf_runloop_timer( struct CFMIDIRunl
       (double) timeout->tv_sec + 0.000000001 * (double) timeout->tv_nsec,
       0, 1, &_cf_timer_callback, &(cf_runloop->timer_context) );
     CFRunLoopAddTimer( cf_runloop->runloop, timer, kCFRunLoopCommonModes );
+    CFSetAddValue( cf_runloop->cf_timers, timer );
   }
   return timer;
 }
@@ -237,13 +235,15 @@ static CFSocketRef _cf_runloop_provide_cf_socket( struct CFMIDIRunloop * cf_runl
   
   socket = _cf_runloop_find_cf_socket( cf_runloop, fd );
   if( socket == NULL ) {
-    socket = CFSocketCreateWithNative( NULL, fd, kCFSocketNoCallBack, &_cf_socket_callback, &(cf_runloop->socket_context) );
+    socket = CFSocketCreateWithNative( NULL, fd, kCFSocketReadCallBack | kCFSocketWriteCallBack,
+                                       &_cf_socket_callback, &(cf_runloop->socket_context) );
     source = CFSocketCreateRunLoopSource( NULL, socket, 1 );
     if( !CFSetContainsValue( cf_runloop->cf_sources, source ) ) {
       CFSetAddValue( cf_runloop->cf_sources, source );
       CFRunLoopAddSource( cf_runloop->runloop, source, kCFRunLoopCommonModes );
     }
     CFRelease( source );
+    CFSetAddValue( cf_runloop->cf_sockets, socket );
   }
 
   return socket;
@@ -297,18 +297,22 @@ static int _cf_runloop_socket_disable_callback( struct CFMIDIRunloop * cf_runloo
  */
 
 static int _cf_runloop_schedule_read( void * info, int fd ) {
+  MIDILog( DEBUG, "CoreFoundation integration: Schedule read (%i)\n", fd );
   return _cf_runloop_socket_enable_callback( info, fd, kCFSocketReadCallBack );
 }
 
 static int _cf_runloop_clear_read( void * info, int fd ) {
+  MIDILog( DEBUG, "CoreFoundation integration: Clear read (%i)\n", fd );
   return _cf_runloop_socket_disable_callback( info, fd, kCFSocketReadCallBack );
 }
 
 static int _cf_runloop_schedule_write( void * info, int fd ) {
+  MIDILog( DEBUG, "CoreFoundation integration: Schedule write (%i)\n", fd );
   return _cf_runloop_socket_enable_callback( info, fd, kCFSocketWriteCallBack );
 }
 
 static int _cf_runloop_clear_write( void * info, int fd ) {
+  MIDILog( DEBUG, "CoreFoundation integration: Clear write (%i)\n", fd );
   return _cf_runloop_socket_disable_callback( info, fd, kCFSocketWriteCallBack );
 }
 
@@ -316,6 +320,7 @@ static int _cf_runloop_schedule_timeout( void * info, struct timespec * timeout 
   struct CFMIDIRunloop * cf_runloop = info;
   CFRunLoopTimerRef timer;
   MIDIAssert( cf_runloop != NULL );
+  MIDILog( DEBUG, "CoreFoundation integration: Schedule timeout\n" );
   timer = _cf_runloop_provide_cf_runloop_timer( cf_runloop, timeout );
   return (timer != NULL);
 }
@@ -323,7 +328,7 @@ static int _cf_runloop_schedule_timeout( void * info, struct timespec * timeout 
 static int _cf_runloop_clear_timeout( void * info ) {
   struct CFMIDIRunloop * runloop = info;
   MIDIAssert( runloop != NULL );
-
+  MIDILog( DEBUG, "CoreFoundation integration: Clear timeout\n" );
   return 0;
 }
 

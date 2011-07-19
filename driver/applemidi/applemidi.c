@@ -10,6 +10,8 @@
 #include "applemidi.h"
 #include "driver/common/rtp.h"
 #include "driver/common/rtpmidi.h"
+
+#include "midi/midi.h"
 #include "midi/runloop.h"
 #include "midi/clock.h"
 #include "midi/driver.h"
@@ -415,6 +417,12 @@ int MIDIDriverAppleMIDIReceiveMessage( struct MIDIDriverAppleMIDI * driver, stru
 }
 
 /**
+ * @todo: remove the forward declaration as soon as MIDIDriverAppleMIDISendMessage does
+ * start queueing messages instead of sending immediately.
+ */
+int MIDIDriverAppleMIDISend( struct MIDIDriverAppleMIDI * driver );
+
+/**
  * @brief Process outgoing MIDI messages.
  * This is called by the generic driver interface to pass messages to this driver implementation.
  * The driver may queue outgoing messages to reduce package overhead, trading of latency for throughput.
@@ -434,10 +442,14 @@ int MIDIDriverAppleMIDISendMessage( struct MIDIDriverAppleMIDI * driver, struct 
   MIDIClockGetNow( driver->base.clock, &timestamp );
   MIDIMessageSetTimestamp( message, timestamp );
   MIDIMessageQueuePush( driver->out_queue, message );
+/**
+ * @todo: instead of sending directly, set a minimal timeout, just long enough so that
+ * multiple messages that are queued together will be sent together.
+ */
   return MIDIDriverAppleMIDISend( driver );
 }
 
-
+/*
 static int _applemidi_init_addr_with_peer( struct AppleMIDICommand * command, struct RTPPeer * peer ) {
   struct sockaddr * addr;
   socklen_t size;
@@ -447,6 +459,7 @@ static int _applemidi_init_addr_with_peer( struct AppleMIDICommand * command, st
   command->size = size;
   return 0;
 }
+*/
 
 /**
  * @brief Test incoming packets for the AppleMIDI signature.

@@ -218,7 +218,8 @@ int MIDIDriverGetPort( struct MIDIDriver * driver, struct MIDIPort ** port ) {
  */
 int MIDIDriverMakeLoopback( struct MIDIDriver * driver ) {
   MIDIPrecond( driver != NULL, EFAULT );
-  driver->send = &MIDIDriverReceive;
+  /* Ugly but (for now) safe cast ahead... */
+  driver->send = (int (*)( void *, struct MIDIMessage * )) &MIDIDriverReceive;
   return 0;
 }
 
