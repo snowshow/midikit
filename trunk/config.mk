@@ -2,7 +2,15 @@
 MKDIR_P = mkdir -p
 LN_S = ln -s
 
-LINK_MODE = DYNAMIC
+# LINK_MODE:
+#   SHARED  - for .so
+#   DYNAMIC - for .dylib (Darwin) or .dll (Windows, not yet..)
+#   STATIC  - for .a
+LINK_MODE = SHARED
+
+# COMPILE_MODE:
+#   DEBUG   - generate debugging information and verbose logging
+#   RELEASE - without debugging information, logging, safety checks
 COMPILE_MODE = DEBUG
 
 BUILDDIR = $(PROJECTDIR)/build
@@ -12,7 +20,7 @@ LIBDIR = $(BUILDDIR)
 BINDIR = $(BUILDDIR)
 
 CC = clang
-CFLAGS_DEBUG = -O3 -Wall -DDEBUG
+CFLAGS_DEBUG = -O3 -Wall -DDEBUG -g
 CFLAGS_RELEASE = -O3 -Wall
 CFLAGS = $(CFLAGS_$(COMPILE_MODE)) -I$(PROJECTDIR) -DSUBDIR=\"$(SUBDIR)\" #-DNO_LOG -DNO_ASSERT -DNO_PRECOND -DNO_ERROR
 CFLAGS_OBJ_SHARED = $(CFLAGS) -c -fPIC
@@ -21,7 +29,9 @@ CFLAGS_OBJ_STATIC = $(CFLAGS) -c
 CFLAGS_OBJ = $(CFLAGS_OBJ_$(LINK_MODE))
 
 LD = $(CC)
-LDFLAGS = -L$(LIBDIR) -O4
+LDFLAGS_DEBUG = -O4 -g
+LDFLAGS_RELEASE = -O4 -Wl,-S,-x
+LDFLAGS = $(LDFLAGS_$(COMPILE_MODE)) -L$(LIBDIR)
 LDFLAGS_LIB_SHARED = $(LDFLAGS) -shared
 LDFLAGS_LIB_DYNAMIC = $(LDFLAGS) -dynamiclib -undefined suppress -flat_namespace
 LDFLAGS_LIB = $(LDFLAGS_LIB_$(LINK_MODE))
